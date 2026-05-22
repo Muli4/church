@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AIC Kongowea | About Us - Our History & Leadership</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       PRELOADER ANIMATION
+  ===================================================== -->
+  <div id="aic-preloader" class="aic-preloader">
+    <div class="aic-preloader-inner">
+      <div class="aic-preloader-logo">
+        <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-preloader-img" 
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="aic-preloader-icon" style="display: none;">
+          <i class="fas fa-cross"></i>
+        </div>
+      </div>
+      <div class="aic-preloader-text">AIC Kongowea</div>
+      <div class="aic-preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       HEADER & NAVIGATION
+  ===================================================== -->
+  <header id="aic-header" class="aic-header">
+    <div class="aic-header-top-bar"></div>
+    <div class="aic-header-main">
+      <div class="aic-container aic-header-flex">
+        
+        <!-- Logo / Brand with Image Fallback -->
+        <a href="index.html" class="aic-logo" id="aic-logo-main">
+          <div class="aic-logo-icon">
+            <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-logo-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="aic-logo-fallback" style="display: none;">
+              <i class="fas fa-cross"></i>
+            </div>
+          </div>
+          <div class="aic-logo-text">
+            <span class="aic-logo-name">AIC Kongowea</span>
+            <span class="aic-logo-tagline">African Inland Church · Mombasa</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="aic-nav-desktop" id="aic-nav-primary">
+          <ul class="aic-nav-list" id="aic-desktop-nav-list">
+            <li class="aic-nav-item"><a href="index.html" class="aic-nav-link">Home</a></li>
+            <li class="aic-nav-item"><a href="about.html" class="aic-nav-link aic-nav-link-active">About</a></li>
+            <li class="aic-nav-item"><a href="ministries.html" class="aic-nav-link">Ministries</a></li>
+            <li class="aic-nav-item"><a href="sermons.html" class="aic-nav-link">Sermons</a></li>
+            <li class="aic-nav-item"><a href="events.html" class="aic-nav-link">Events</a></li>
+            <li class="aic-nav-item"><a href="contact.html" class="aic-nav-link">Contact</a></li>
+            <li class="aic-nav-item aic-nav-cta"><a href="donate.html" class="aic-btn-give">Give <i class="fas fa-heart"></i></a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button class="aic-mobile-toggle" id="aic-mobile-toggle-btn" aria-label="Menu">
+          <span class="aic-hamburger-line aic-hamburger-line-1"></span>
+          <span class="aic-hamburger-line aic-hamburger-line-2"></span>
+          <span class="aic-hamburger-line aic-hamburger-line-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="aic-mobile-overlay" id="aic-mobile-overlay">
+      <div class="aic-mobile-overlay-bg"></div>
+      <div class="aic-mobile-menu-container">
+        <ul class="aic-mobile-nav-list">
+          <li class="aic-mobile-nav-item"><a href="index.html" class="aic-mobile-nav-link">Home</a></li>
+          <li class="aic-mobile-nav-item"><a href="about.html" class="aic-mobile-nav-link">About</a></li>
+          <li class="aic-mobile-nav-item"><a href="ministries.html" class="aic-mobile-nav-link">Ministries</a></li>
+          <li class="aic-mobile-nav-item"><a href="sermons.html" class="aic-mobile-nav-link">Sermons</a></li>
+          <li class="aic-mobile-nav-item"><a href="events.html" class="aic-mobile-nav-link">Events</a></li>
+          <li class="aic-mobile-nav-item"><a href="contact.html" class="aic-mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="aic-mobile-give-container">
+          <a href="donate.html" class="aic-mobile-give-btn">Support the Ministry <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="aic-mobile-scripture">
+          <i class="fas fa-quote-left"></i>
+          <p>"For where two or three gather in my name, there am I with them."</p>
+          <span>— Matthew 18:20</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="aic-main-content">
+
+    <!-- =====================================================
+         PAGE HERO - ABOUT US
+    ===================================================== -->
+    <section class="aic-page-hero">
+      <div class="aic-page-hero-bg"></div>
+      <div class="aic-container">
+        <div class="aic-page-hero-content" data-aos="fade-up">
+          <div class="aic-hero-badge-wrapper">
+            <span class="aic-hero-badge">
+              <i class="fas fa-church"></i> Learn About Us
+            </span>
+          </div>
+          <h1 class="aic-page-hero-title">Our <span class="aic-accent">Story</span></h1>
+          <p class="aic-page-hero-description">Discover the heart, history, and leadership of AIC Kongowea — a church committed to faith, community, and transformation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         WHO WE ARE SECTION
+    ===================================================== -->
+    <section class="aic-who-we-are-section">
+      <div class="aic-container">
+        <div class="aic-who-grid">
+          <div class="aic-who-content" data-aos="fade-right">
+            <div class="aic-section-header aic-section-header-left">
+              <span class="aic-section-tag">Who We Are</span>
+              <h2 class="aic-section-title">AIC Kongowea at a Glance</h2>
+              <div class="aic-section-divider aic-section-divider-left"></div>
+            </div>
+            <p class="aic-who-text">AIC Kongowea is a congregation under the African Inland Church (AIC), dedicated to spreading the Gospel and impacting lives through biblical teaching, prayer, worship, and community outreach.</p>
+            <p class="aic-who-text">We are a family of believers from all walks of life, united by our love for Christ and our desire to see His kingdom grow in Mombasa and beyond.</p>
+            <div class="aic-who-stats">
+              <div class="aic-who-stat">
+                <span class="aic-who-stat-number">2005</span>
+                <span class="aic-who-stat-label">Year Founded</span>
+              </div>
+              <div class="aic-who-stat">
+                <span class="aic-who-stat-number">1500+</span>
+                <span class="aic-who-stat-label">Active Members</span>
+              </div>
+              <div class="aic-who-stat">
+                <span class="aic-who-stat-number">8</span>
+                <span class="aic-who-stat-label">Ministries</span>
+              </div>
+            </div>
+          </div>
+          <div class="aic-who-image" data-aos="fade-left">
+            <div class="aic-who-image-placeholder">
+              <i class="fas fa-church"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         OUR HISTORY TIMELINE
+    ===================================================== -->
+    <section class="aic-history-section">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Our Journey</span>
+          <h2 class="aic-section-title">Church History</h2>
+          <div class="aic-section-divider"></div>
+          <p class="aic-section-subtitle">Founded to serve the spiritual needs of the Kongowea community, AIC Kongowea has continued to grow as a center of faith, hope, and transformation.</p>
+        </div>
+        
+        <div class="aic-history-timeline" data-aos="fade-up">
+          <div class="aic-history-item">
+            <div class="aic-history-year">
+              <span>2005</span>
+            </div>
+            <div class="aic-history-content">
+              <h3>Humble Beginnings</h3>
+              <p>AIC Kongowea was founded as a small fellowship meeting in a member's home, with just 15 faithful believers gathering for prayer and Bible study.</p>
+            </div>
+          </div>
+          <div class="aic-history-item">
+            <div class="aic-history-year">
+              <span>2010</span>
+            </div>
+            <div class="aic-history-content">
+              <h3>First Church Building</h3>
+              <p>The congregation acquired land and constructed the first permanent church building, accommodating over 200 worshippers.</p>
+            </div>
+          </div>
+          <div class="aic-history-item">
+            <div class="aic-history-year">
+              <span>2015</span>
+            </div>
+            <div class="aic-history-content">
+              <h3>Ministry Expansion</h3>
+              <p>Launched Youth, Women, and Children's ministries, reaching more families and young people in the community.</p>
+            </div>
+          </div>
+          <div class="aic-history-item">
+            <div class="aic-history-year">
+              <span>2020</span>
+            </div>
+            <div class="aic-history-content">
+              <h3>Digital Outreach</h3>
+              <p>Adapted to online services during challenging times, reaching a global audience through live streaming.</p>
+            </div>
+          </div>
+          <div class="aic-history-item">
+            <div class="aic-history-year">
+              <span>2024</span>
+            </div>
+            <div class="aic-history-content">
+              <h3>Community Impact</h3>
+              <p>Launched extensive community outreach programs, including food distribution, medical camps, and education support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MISSION & VISION REAFFIRMED
+    ===================================================== -->
+    <section class="aic-mission-vision-section">
+      <div class="aic-container">
+        <div class="aic-mv-grid">
+          <div class="aic-mv-card aic-mission-card" data-aos="flip-left">
+            <div class="aic-mv-card-inner">
+              <div class="aic-mv-icon-wrapper">
+                <i class="fas fa-bible"></i>
+                <div class="aic-mv-icon-bg"></div>
+              </div>
+              <h3>Our Mission</h3>
+              <p>To preach the Gospel of Jesus Christ, nurture believers spiritually, and serve the community with love, compassion, and integrity.</p>
+              <div class="aic-mv-hover-line"></div>
+            </div>
+          </div>
+          <div class="aic-mv-card aic-vision-card" data-aos="flip-right">
+            <div class="aic-mv-card-inner">
+              <div class="aic-mv-icon-wrapper">
+                <i class="fas fa-eye"></i>
+                <div class="aic-mv-icon-bg"></div>
+              </div>
+              <h3>Our Vision</h3>
+              <p>To be a Christ-centered church transforming lives through worship, discipleship, evangelism, and community service.</p>
+              <div class="aic-mv-hover-line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CORE VALUES SECTION (Detailed)
+    ===================================================== -->
+    <section class="aic-values-detailed-section">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Our Foundation</span>
+          <h2 class="aic-section-title">Core Values</h2>
+          <div class="aic-section-divider"></div>
+          <p class="aic-section-subtitle">These values guide everything we do as a church family</p>
+        </div>
+        
+        <div class="aic-values-detailed-grid">
+          <div class="aic-value-detailed-card" data-aos="zoom-in" data-aos-delay="0">
+            <div class="aic-value-detailed-icon">
+              <i class="fas fa-praying-hands"></i>
+            </div>
+            <h3>Faith in God</h3>
+            <p>We place our complete trust in God, believing He is the source of all wisdom, strength, and salvation.</p>
+          </div>
+          <div class="aic-value-detailed-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="aic-value-detailed-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Love & Compassion</h3>
+            <p>We demonstrate Christ's love through acts of kindness, mercy, and genuine care for all people.</p>
+          </div>
+          <div class="aic-value-detailed-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="aic-value-detailed-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3>Integrity</h3>
+            <p>We commit to honesty, transparency, and moral uprightness in all our dealings and relationships.</p>
+          </div>
+          <div class="aic-value-detailed-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="aic-value-detailed-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3>Service to Community</h3>
+            <p>We actively serve our local community, meeting practical needs while sharing the hope of the Gospel.</p>
+          </div>
+          <div class="aic-value-detailed-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="aic-value-detailed-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Unity & Fellowship</h3>
+            <p>We value our diversity and work together as one body, supporting and encouraging one another.</p>
+          </div>
+          <div class="aic-value-detailed-card" data-aos="zoom-in" data-aos-delay="500">
+            <div class="aic-value-detailed-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Spiritual Growth</h3>
+            <p>We are committed to lifelong learning, discipleship, and growing deeper in relationship with God.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         LEADERSHIP SECTION
+    ===================================================== -->
+    <section class="aic-leadership-section">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Shepherds of the Flock</span>
+          <h2 class="aic-section-title">Our Leadership</h2>
+          <div class="aic-section-divider"></div>
+          <p class="aic-section-subtitle">Meet the dedicated leaders guiding AIC Kongowea</p>
+        </div>
+        
+        <!-- Senior Pastor -->
+        <div class="aic-senior-pastor" data-aos="fade-up">
+          <div class="aic-pastor-image">
+            <div class="aic-pastor-placeholder">
+              <i class="fas fa-user-pastor"></i>
+            </div>
+          </div>
+          <div class="aic-pastor-info">
+            <h3>Rev. Dr. Samuel Mwangi</h3>
+            <span class="aic-pastor-title">Senior Pastor</span>
+            <p>Rev. Dr. Samuel Mwangi has been serving as the Senior Pastor of AIC Kongowea since 2012. He holds a Doctorate in Ministry from Nairobi Evangelical Graduate School of Theology and has over 25 years of pastoral experience. He is passionate about expository preaching, discipleship, and community transformation. Together with his wife, Pastor Esther, they have three children and are committed to raising a generation of faithful believers.</p>
+            <div class="aic-pastor-quote">
+              <i class="fas fa-quote-left"></i>
+              <span>"My heart is to see every believer walking in the fullness of God's purpose for their lives."</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Church Elders -->
+        <div class="aic-elders-section" data-aos="fade-up">
+          <h3 class="aic-subsection-title">Church Elders</h3>
+          <div class="aic-elders-grid">
+            <div class="aic-elder-card">
+              <div class="aic-elder-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h4>Elder James Otieno</h4>
+              <span>Chairman of Elders</span>
+              <p>Oversees church administration and spiritual direction.</p>
+            </div>
+            <div class="aic-elder-card">
+              <div class="aic-elder-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <h4>Elder Grace Wanjiku</h4>
+              <span>Secretary</span>
+              <p>Coordinates women's ministries and pastoral care.</p>
+            </div>
+            <div class="aic-elder-card">
+              <div class="aic-elder-icon">
+                <i class="fas fa-user-cog"></i>
+              </div>
+              <h4>Elder Peter Mwangi</h4>
+              <span>Treasurer</span>
+              <p>Manages church finances and property.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Ministry Leaders -->
+        <div class="aic-ministry-leaders-section" data-aos="fade-up">
+          <h3 class="aic-subsection-title">Ministry Leaders</h3>
+          <div class="aic-ministry-leaders-grid">
+            <div class="aic-leader-card-simple">
+              <i class="fas fa-users"></i>
+              <h4>Youth Ministry</h4>
+              <p>Pastor David Omondi</p>
+            </div>
+            <div class="aic-leader-card-simple">
+              <i class="fas fa-female"></i>
+              <h4>Women Ministry</h4>
+              <p>Mama Ruth Akinyi</p>
+            </div>
+            <div class="aic-leader-card-simple">
+              <i class="fas fa-male"></i>
+              <h4>Men Fellowship</h4>
+              <p>Brother Joseph Kimathi</p>
+            </div>
+            <div class="aic-leader-card-simple">
+              <i class="fas fa-child"></i>
+              <h4>Children Ministry</h4>
+              <p>Sister Mercy Njeri</p>
+            </div>
+            <div class="aic-leader-card-simple">
+              <i class="fas fa-music"></i>
+              <h4>Worship Team</h4>
+              <p>Brother Caleb Otieno</p>
+            </div>
+            <div class="aic-leader-card-simple">
+              <i class="fas fa-camera"></i>
+              <h4>Media Ministry</h4>
+              <p>Brother Ian Mwangi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         DENOMINATION INFO - AFRICAN INLAND CHURCH
+    ===================================================== -->
+    <section class="aic-denomination-section">
+      <div class="aic-container">
+        <div class="aic-denomination-content" data-aos="fade-up">
+          <i class="fas fa-globe-africa"></i>
+          <h2>Part of the African Inland Church (AIC)</h2>
+          <p>AIC Kongowea is proud to be part of the African Inland Church, a denomination committed to biblical faithfulness, evangelism, and church planting across Africa and beyond.</p>
+          <div class="aic-denomination-stats">
+            <div class="aic-denom-stat">
+              <span>8,000+</span>
+              <label>Churches</label>
+            </div>
+            <div class="aic-denom-stat">
+              <span>4M+</span>
+              <label>Members</label>
+            </div>
+            <div class="aic-denom-stat">
+              <span>40+</span>
+              <label>Countries</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CALL TO ACTION - JOIN US
+    ===================================================== -->
+    <section class="aic-cta-section">
+      <div class="aic-container">
+        <div class="aic-cta-content" data-aos="zoom-in">
+          <h2>Become Part of Our Family</h2>
+          <p>Whether you're new to faith or looking for a church home, you are welcome at AIC Kongowea.</p>
+          <div class="aic-cta-buttons">
+            <a href="contact.html" class="aic-btn-primary aic-btn-large">Plan Your Visit <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="aic-btn-outline aic-btn-large">Contact Us <i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BIBLE VERSE OF THE DAY (Floating Widget)
+    ===================================================== -->
+    <div class="aic-bible-verse-widget" id="aic-bible-verse">
+      <div class="aic-verse-content">
+        <i class="fas fa-bible"></i>
+        <p id="aic-verse-text">Loading verse...</p>
+        <span id="aic-verse-reference"></span>
+      </div>
+      <button class="aic-verse-close" id="aic-verse-close">×</button>
+    </div>
+
+    <!-- =====================================================
+         PRAYER REQUEST FLOATING BUTTON
+    ===================================================== -->
+    <button class="aic-prayer-button" id="aic-prayer-button">
+      <i class="fas fa-praying-hands"></i>
+      <span>Prayer Request</span>
+    </button>
+    
+    <div class="aic-prayer-modal" id="aic-prayer-modal">
+      <div class="aic-prayer-modal-content">
+        <button class="aic-prayer-modal-close">&times;</button>
+        <i class="fas fa-pray"></i>
+        <h3>Submit a Prayer Request</h3>
+        <form id="aic-prayer-form">
+          <input type="text" placeholder="Your Name (Optional)">
+          <textarea rows="4" placeholder="Share your prayer request..."></textarea>
+          <button type="submit" class="aic-btn-primary">Submit Request</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         BACK TO TOP BUTTON
+    ===================================================== -->
+    <button class="aic-back-to-top" id="aic-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="aic-footer">
+    <div class="aic-container">
+      <div class="aic-footer-grid">
+        <div class="aic-footer-col">
+          <div class="aic-footer-logo">
+            <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-footer-logo-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="aic-footer-logo-fallback" style="display: none;">
+              <i class="fas fa-cross"></i>
+            </div>
+            <span>AIC Kongowea</span>
+          </div>
+          <p>African Inland Church — Kongowea, Mombasa, Kenya</p>
+          <p>A Christ-centered church transforming lives through worship, discipleship, and community service.</p>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Ministries</h4>
+          <ul>
+            <li><a href="ministries.html#youth">Youth Ministry</a></li>
+            <li><a href="ministries.html#women">Women Ministry</a></li>
+            <li><a href="ministries.html#men">Men Fellowship</a></li>
+            <li><a href="ministries.html#children">Children Ministry</a></li>
+            <li><a href="ministries.html#worship">Worship Team</a></li>
+            <li><a href="ministries.html#media">Media Ministry</a></li>
+          </ul>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates and devotionals</p>
+          <div class="aic-footer-newsletter">
+            <input type="email" placeholder="Your email">
+            <button><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="aic-footer-bottom">
+        <p>&copy; 2025 AIC Kongowea — African Inland Church. All glory to God.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
