@@ -1290,32 +1290,103 @@ body:hover .aic-cursor-dot {
 
 .aic-sermons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
+/* ── Base card ── */
 .aic-sermon-card-modern {
   background: var(--aic-parchment);
   border-radius: var(--aic-border-radius);
   overflow: hidden;
   transition: all var(--aic-transition-default);
   border: 1px solid var(--aic-border);
+  display: flex;
+  flex-direction: column;
 }
 
 .aic-sermon-card-modern:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px var(--aic-shadow-strong);
+  box-shadow: 0 15px 40px var(--aic-shadow-strong);
   border-color: var(--aic-gold-light);
 }
 
+/* ── YouTube thumbnail wrapper (injected by JS) ── */
+.aic-sermon-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  display: block;
+  background: linear-gradient(135deg, var(--aic-text-dark), #3D3528);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.aic-sermon-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s var(--aic-transition-default);
+}
+
+.aic-sermon-thumb-wrap:hover img {
+  transform: scale(1.06);
+}
+
+/* Play overlay on hover */
+.aic-sermon-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 21, 16, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aic-sermon-thumb-wrap:hover .aic-sermon-thumb-overlay {
+  opacity: 1;
+}
+
+.aic-sermon-thumb-overlay i {
+  font-size: 3.8rem;
+  color: #FF0000; /* YouTube red */
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+  transition: transform 0.25s ease;
+}
+
+.aic-sermon-thumb-wrap:hover .aic-sermon-thumb-overlay i {
+  transform: scale(1.12);
+}
+
+/* Publish date badge on thumbnail */
+.aic-sermon-pub-date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Fallback static media block (no thumbnail) ── */
 .aic-sermon-media {
-  height: 180px;
+  height: 190px;
   background: linear-gradient(135deg, var(--aic-text-dark), #3D3528);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .aic-sermon-media i {
@@ -1340,56 +1411,135 @@ body:hover .aic-cursor-dot {
   color: white;
 }
 
+/* ── Card body ── */
 .aic-sermon-details {
-  padding: 1.5rem;
+  padding: 1.4rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .aic-sermon-details h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  font-family: var(--aic-font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--aic-text-dark);
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+
+  /* Clamp to 2 lines so all cards stay same height */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .aic-sermon-scripture {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-family: var(--aic-font-serif);
   font-style: italic;
   color: var(--aic-gold-medium);
-  font-size: 0.85rem;
-  margin-bottom: 0.8rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.75rem;
 }
 
 .aic-sermon-details p {
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   color: var(--aic-text-body);
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  margin-bottom: 1.1rem;
+  line-height: 1.6;
+  flex: 1;
+
+  /* Clamp description to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
+/* ── Action buttons ── */
 .aic-sermon-actions {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.7rem;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .aic-sermon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: transparent;
-  border: 1px solid var(--aic-border);
-  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--aic-border-strong);
+  padding: 0.42rem 1rem;
   border-radius: 20px;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   cursor: pointer;
-  transition: all 0.2s;
+  text-decoration: none;
   color: var(--aic-text-body);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .aic-sermon-btn:hover {
   background: var(--aic-gold-dark);
   border-color: var(--aic-gold-dark);
   color: white;
+  transform: translateY(-1px);
 }
 
-.aic-sermons-footer, .aic-events-footer, .aic-gallery-footer {
+.aic-sermon-btn i {
+  font-size: 0.78rem;
+}
+
+/* ── Skeleton loader cards ── */
+.aic-sermon-skeleton {
+  pointer-events: none;
+}
+
+.aic-skeleton-block {
+  background: linear-gradient(90deg, #f0ebe0 25%, #e4ddd0 50%, #f0ebe0 75%);
+  background-size: 200% 100%;
+  animation: aic-skeleton-shimmer 1.4s ease infinite;
+}
+
+.aic-skeleton-line {
+  border-radius: 4px;
+  margin-bottom: 0.65rem;
+  background: linear-gradient(90deg, #f0ebe0 25%, #e4ddd0 50%, #f0ebe0 75%);
+  background-size: 200% 100%;
+  animation: aic-skeleton-shimmer 1.4s ease infinite;
+}
+
+.aic-skeleton-title { height: 18px; width: 82%; }
+.aic-skeleton-sub   { height: 13px; width: 48%; animation-delay: 0.1s; }
+.aic-skeleton-body  { height: 13px; width: 92%; animation-delay: 0.2s; }
+
+@keyframes aic-skeleton-shimmer {
+  0%   { background-position:  200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Footer link ── */
+.aic-sermons-footer,
+.aic-events-footer,
+.aic-gallery-footer {
   text-align: center;
   margin-top: 2.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .aic-sermons-grid {
+    grid-template-columns: 1fr;
+  }
+  .aic-sermon-thumb-wrap,
+  .aic-sermon-media {
+    height: 210px;
+  }
 }
 
 /* =====================================================
@@ -2810,3 +2960,743 @@ body:hover .aic-cursor-dot {
   flex-wrap: wrap;
 }
 /* about styles end here*/
+
+/* ministry styles begin here*/
+/* =====================================================
+   MINISTRIES PAGE SPECIFIC STYLES
+===================================================== */
+
+/* Featured Ministries Cards */
+.aic-ministries-overview {
+  padding: 80px 0;
+  background: var(--aic-white);
+}
+
+.aic-ministries-featured-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.aic-ministry-featured-card {
+  display: flex;
+  gap: 2rem;
+  background: var(--aic-parchment);
+  border-radius: var(--aic-border-radius);
+  overflow: hidden;
+  border: 1px solid var(--aic-border);
+  transition: all var(--aic-transition-default);
+}
+
+.aic-ministry-featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--aic-shadow-strong);
+  border-color: var(--aic-gold-light);
+}
+
+.aic-ministry-featured-icon {
+  background: linear-gradient(135deg, var(--aic-gold-dark), var(--aic-gold-medium));
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aic-ministry-featured-icon i {
+  font-size: 4rem;
+  color: white;
+}
+
+.aic-ministry-featured-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.aic-ministry-featured-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.aic-ministry-featured-content h3 span {
+  font-size: 0.9rem;
+  color: var(--aic-gold-medium);
+  font-weight: normal;
+}
+
+.aic-ministry-featured-content p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+.aic-ministry-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.aic-ministry-detail-item {
+  font-size: 0.85rem;
+  color: var(--aic-text-muted);
+}
+
+.aic-ministry-detail-item i {
+  color: var(--aic-gold-medium);
+  width: 24px;
+}
+
+.aic-ministry-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--aic-gold-dark);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.aic-ministry-join-btn:hover {
+  gap: 12px;
+  color: var(--aic-gold-medium);
+}
+
+@media (max-width: 800px) {
+  .aic-ministry-featured-card {
+    flex-direction: column;
+  }
+  .aic-ministry-featured-icon {
+    min-width: auto;
+    padding: 2rem;
+  }
+  .aic-ministry-featured-icon i {
+    font-size: 2.5rem;
+  }
+}
+
+/* Additional Ministries Grid */
+.aic-additional-ministries {
+  padding: 80px 0;
+  background: var(--aic-parchment);
+}
+
+.aic-additional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.aic-additional-card {
+  background: var(--aic-white);
+  padding: 1.8rem;
+  border-radius: var(--aic-border-radius);
+  text-align: center;
+  transition: all var(--aic-transition-default);
+  border: 1px solid var(--aic-border);
+}
+
+.aic-additional-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--aic-shadow-strong);
+  border-color: var(--aic-gold-light);
+}
+
+.aic-additional-card i {
+  font-size: 2.2rem;
+  color: var(--aic-gold-dark);
+  margin-bottom: 1rem;
+}
+
+.aic-additional-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.aic-additional-card p {
+  font-size: 0.85rem;
+  color: var(--aic-text-body);
+  line-height: 1.5;
+}
+
+/* Ministry Schedule */
+.aic-ministry-schedule {
+  padding: 80px 0;
+  background: var(--aic-white);
+}
+
+.aic-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.aic-schedule-day {
+  background: var(--aic-parchment);
+  padding: 1.5rem;
+  border-radius: var(--aic-border-radius);
+  border: 1px solid var(--aic-border);
+  transition: all var(--aic-transition-default);
+}
+
+.aic-schedule-day:hover {
+  transform: translateY(-3px);
+  border-color: var(--aic-gold-light);
+}
+
+.aic-schedule-day h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--aic-border);
+}
+
+.aic-schedule-day h3 i {
+  color: var(--aic-gold-medium);
+  margin-right: 8px;
+}
+
+.aic-schedule-day ul {
+  list-style: none;
+}
+
+.aic-schedule-day ul li {
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.aic-schedule-time {
+  font-weight: 600;
+  color: var(--aic-gold-dark);
+  min-width: 80px;
+}
+
+/* Join Ministry CTA */
+.aic-join-ministry-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--aic-parchment-dark), var(--aic-parchment));
+  text-align: center;
+}
+
+.aic-join-ministry-cta .aic-cta-content i {
+  font-size: 3rem;
+  color: var(--aic-gold-dark);
+  margin-bottom: 1rem;
+}
+
+/* Select dropdown styling */
+.aic-contact-form-wrapper select {
+  width: 100%;
+  padding: 1rem 1rem 1rem 2.8rem;
+  border: 1px solid var(--aic-border);
+  border-radius: var(--aic-border-radius-sm);
+  background: var(--aic-white);
+  font-family: var(--aic-font-sans);
+  appearance: none;
+  cursor: pointer;
+}
+
+.aic-contact-form-wrapper select:focus {
+  outline: none;
+  border-color: var(--aic-gold-medium);
+  box-shadow: 0 0 0 3px var(--aic-gold-wash);
+}
+
+.aic-contact-form-wrapper .aic-form-group {
+  position: relative;
+}
+
+.aic-contact-form-wrapper .aic-form-group select + i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--aic-text-muted);
+}
+/* ministry styles end here*/
+
+/* sermon styles start here*/
+/* =====================================================
+   SERMONS PAGE SPECIFIC STYLES
+===================================================== */
+
+/* Featured Sermon Section */
+.aic-featured-sermon {
+  padding: 80px 0 40px;
+  background: var(--aic-white);
+}
+
+.aic-featured-sermon-wrapper {
+  background: var(--aic-parchment);
+  border-radius: var(--aic-border-radius);
+  overflow: hidden;
+  border: 1px solid var(--aic-border);
+}
+
+.aic-featured-sermon-header {
+  padding: 2rem 2rem 0;
+}
+
+.aic-featured-sermon-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.aic-featured-video {
+  background: linear-gradient(135deg, var(--aic-text-dark), #3D3528);
+  border-radius: var(--aic-border-radius-sm);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--aic-transition-default);
+}
+
+.aic-featured-video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px var(--aic-shadow-strong);
+}
+
+.aic-video-placeholder {
+  text-align: center;
+  color: white;
+}
+
+.aic-video-placeholder i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.aic-video-placeholder span {
+  font-size: 1rem;
+}
+
+.aic-featured-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.aic-featured-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--aic-text-muted);
+}
+
+.aic-featured-meta i {
+  color: var(--aic-gold-medium);
+  margin-right: 5px;
+}
+
+.aic-featured-info p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.aic-featured-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.aic-sermon-action-btn {
+  background: var(--aic-white);
+  border: 1px solid var(--aic-border);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--aic-border-radius-sm);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--aic-font-sans);
+}
+
+.aic-sermon-action-btn:hover {
+  background: var(--aic-gold-dark);
+  border-color: var(--aic-gold-dark);
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .aic-featured-sermon-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sermon Filters */
+.aic-sermon-filters {
+  padding: 40px 0;
+  background: var(--aic-parchment);
+}
+
+.aic-filters-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aic-search-bar {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.aic-search-bar i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--aic-text-muted);
+}
+
+.aic-search-bar input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border: 1px solid var(--aic-border);
+  border-radius: var(--aic-border-radius-sm);
+  background: var(--aic-white);
+  font-family: var(--aic-font-sans);
+}
+
+.aic-filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.aic-filter-btn {
+  background: var(--aic-white);
+  border: 1px solid var(--aic-border);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--aic-border-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--aic-font-sans);
+}
+
+.aic-filter-btn:hover,
+.aic-filter-active {
+  background: var(--aic-gold-dark);
+  border-color: var(--aic-gold-dark);
+  color: white;
+}
+
+.aic-category-filter select {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--aic-border);
+  border-radius: var(--aic-border-radius-sm);
+  background: var(--aic-white);
+  font-family: var(--aic-font-sans);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .aic-filters-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Sermons Archive Grid */
+.aic-sermons-archive {
+  padding: 60px 0;
+  background: var(--aic-white);
+}
+
+.aic-sermons-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.aic-sermon-archive-card {
+  background: var(--aic-parchment);
+  border-radius: var(--aic-border-radius);
+  overflow: hidden;
+  transition: all var(--aic-transition-default);
+  border: 1px solid var(--aic-border);
+}
+
+.aic-sermon-archive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--aic-shadow-strong);
+  border-color: var(--aic-gold-light);
+}
+
+.aic-sermon-archive-media {
+  background: linear-gradient(135deg, var(--aic-text-dark), #3D3528);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.aic-sermon-archive-media i {
+  font-size: 3rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.aic-sermon-duration {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: white;
+}
+
+.aic-sermon-archive-details {
+  padding: 1.5rem;
+}
+
+.aic-sermon-archive-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.aic-sermon-archive-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--aic-text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.aic-sermon-archive-meta i {
+  color: var(--aic-gold-medium);
+  margin-right: 4px;
+}
+
+.aic-sermon-scripture {
+  font-family: var(--aic-font-serif);
+  font-style: italic;
+  color: var(--aic-gold-dark);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.aic-sermon-archive-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.aic-sermon-mini-btn {
+  background: var(--aic-white);
+  border: 1px solid var(--aic-border);
+  padding: 0.5rem;
+  border-radius: var(--aic-border-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 38px;
+  height: 38px;
+}
+
+.aic-sermon-mini-btn:hover {
+  background: var(--aic-gold-dark);
+  border-color: var(--aic-gold-dark);
+  color: white;
+}
+
+/* Load More Button */
+.aic-load-more {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* Sermon Series */
+.aic-sermon-series {
+  padding: 80px 0;
+  background: var(--aic-parchment);
+}
+
+.aic-series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.aic-series-card {
+  background: var(--aic-white);
+  padding: 2rem;
+  text-align: center;
+  border-radius: var(--aic-border-radius);
+  border: 1px solid var(--aic-border);
+  transition: all var(--aic-transition-default);
+  cursor: pointer;
+}
+
+.aic-series-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--aic-shadow-strong);
+  border-color: var(--aic-gold-light);
+}
+
+.aic-series-card i {
+  font-size: 2.5rem;
+  color: var(--aic-gold-dark);
+  margin-bottom: 1rem;
+}
+
+.aic-series-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.aic-series-card p {
+  font-size: 0.8rem;
+  color: var(--aic-text-muted);
+  margin-bottom: 1rem;
+}
+
+.aic-series-link {
+  font-size: 0.8rem;
+  color: var(--aic-gold-dark);
+  font-weight: 600;
+}
+
+/* Devotionals Section */
+.aic-devotionals-section {
+  padding: 80px 0;
+  background: var(--aic-white);
+}
+
+.aic-devotionals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.aic-devotional-card {
+  background: var(--aic-parchment);
+  padding: 1.8rem;
+  border-radius: var(--aic-border-radius);
+  border: 1px solid var(--aic-border);
+  transition: all var(--aic-transition-default);
+}
+
+.aic-devotional-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--aic-shadow-strong);
+}
+
+.aic-devotional-date {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--aic-gold-medium);
+  margin-bottom: 0.5rem;
+}
+
+.aic-devotional-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.aic-devotional-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.aic-devotional-link {
+  color: var(--aic-gold-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Subscribe Section */
+.aic-subscribe-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--aic-gold-dark), var(--aic-gold-medium));
+  color: white;
+}
+
+.aic-subscribe-wrapper {
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--aic-border-radius);
+  padding: 2.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.aic-subscribe-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.aic-subscribe-content i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.aic-subscribe-content h3 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.aic-subscribe-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.aic-subscribe-podcast span {
+  margin-right: 1rem;
+}
+
+.aic-subscribe-podcast a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: var(--aic-border-radius-sm);
+  transition: all 0.2s;
+}
+
+.aic-subscribe-podcast a:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.aic-subscribe-email {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aic-subscribe-email input {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: var(--aic-border-radius-sm);
+  width: 250px;
+}
+
+@media (max-width: 700px) {
+  .aic-subscribe-options {
+    flex-direction: column;
+  }
+  .aic-subscribe-email {
+    flex-direction: column;
+    width: 100%;
+  }
+  .aic-subscribe-email input {
+    width: 100%;
+  }
+}
+/* sermon styles ende here*/

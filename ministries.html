@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AIC Kongowea | Ministries - Find Your Place to Serve</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       PRELOADER ANIMATION
+  ===================================================== -->
+  <div id="aic-preloader" class="aic-preloader">
+    <div class="aic-preloader-inner">
+      <div class="aic-preloader-logo">
+        <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-preloader-img" 
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="aic-preloader-icon" style="display: none;">
+          <i class="fas fa-cross"></i>
+        </div>
+      </div>
+      <div class="aic-preloader-text">AIC Kongowea</div>
+      <div class="aic-preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       HEADER & NAVIGATION
+  ===================================================== -->
+  <header id="aic-header" class="aic-header">
+    <div class="aic-header-top-bar"></div>
+    <div class="aic-header-main">
+      <div class="aic-container aic-header-flex">
+        
+        <!-- Logo / Brand with Image Fallback -->
+        <a href="index.html" class="aic-logo" id="aic-logo-main">
+          <div class="aic-logo-icon">
+            <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-logo-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="aic-logo-fallback" style="display: none;">
+              <i class="fas fa-cross"></i>
+            </div>
+          </div>
+          <div class="aic-logo-text">
+            <span class="aic-logo-name">AIC Kongowea</span>
+            <span class="aic-logo-tagline">African Inland Church · Mombasa</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="aic-nav-desktop" id="aic-nav-primary">
+          <ul class="aic-nav-list" id="aic-desktop-nav-list">
+            <li class="aic-nav-item"><a href="index.html" class="aic-nav-link">Home</a></li>
+            <li class="aic-nav-item"><a href="about.html" class="aic-nav-link">About</a></li>
+            <li class="aic-nav-item"><a href="ministries.html" class="aic-nav-link aic-nav-link-active">Ministries</a></li>
+            <li class="aic-nav-item"><a href="sermons.html" class="aic-nav-link">Sermons</a></li>
+            <li class="aic-nav-item"><a href="events.html" class="aic-nav-link">Events</a></li>
+            <li class="aic-nav-item"><a href="contact.html" class="aic-nav-link">Contact</a></li>
+            <li class="aic-nav-item aic-nav-cta"><a href="donate.html" class="aic-btn-give">Give <i class="fas fa-heart"></i></a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button class="aic-mobile-toggle" id="aic-mobile-toggle-btn" aria-label="Menu">
+          <span class="aic-hamburger-line aic-hamburger-line-1"></span>
+          <span class="aic-hamburger-line aic-hamburger-line-2"></span>
+          <span class="aic-hamburger-line aic-hamburger-line-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="aic-mobile-overlay" id="aic-mobile-overlay">
+      <div class="aic-mobile-overlay-bg"></div>
+      <div class="aic-mobile-menu-container">
+        <ul class="aic-mobile-nav-list">
+          <li class="aic-mobile-nav-item"><a href="index.html" class="aic-mobile-nav-link">Home</a></li>
+          <li class="aic-mobile-nav-item"><a href="about.html" class="aic-mobile-nav-link">About</a></li>
+          <li class="aic-mobile-nav-item"><a href="ministries.html" class="aic-mobile-nav-link">Ministries</a></li>
+          <li class="aic-mobile-nav-item"><a href="sermons.html" class="aic-mobile-nav-link">Sermons</a></li>
+          <li class="aic-mobile-nav-item"><a href="events.html" class="aic-mobile-nav-link">Events</a></li>
+          <li class="aic-mobile-nav-item"><a href="contact.html" class="aic-mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="aic-mobile-give-container">
+          <a href="donate.html" class="aic-mobile-give-btn">Support the Ministry <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="aic-mobile-scripture">
+          <i class="fas fa-quote-left"></i>
+          <p>"For where two or three gather in my name, there am I with them."</p>
+          <span>— Matthew 18:20</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="aic-main-content">
+
+    <!-- =====================================================
+         PAGE HERO - MINISTRIES
+    ===================================================== -->
+    <section class="aic-page-hero">
+      <div class="aic-page-hero-bg"></div>
+      <div class="aic-container">
+        <div class="aic-page-hero-content" data-aos="fade-up">
+          <div class="aic-hero-badge-wrapper">
+            <span class="aic-hero-badge">
+              <i class="fas fa-users"></i> Get Involved
+            </span>
+          </div>
+          <h1 class="aic-page-hero-title">Our <span class="aic-accent">Ministries</span></h1>
+          <p class="aic-page-hero-description">Find your place to serve, grow, and connect with others as we fulfill the Great Commission together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MINISTRIES OVERVIEW
+    ===================================================== -->
+    <section class="aic-ministries-overview">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Serve & Grow</span>
+          <h2 class="aic-section-title">Find Your Ministry</h2>
+          <div class="aic-section-divider"></div>
+          <p class="aic-section-subtitle">Whether you're a child, youth, adult, or senior — there's a place for you at AIC Kongowea</p>
+        </div>
+        
+        <div class="aic-ministries-featured-grid">
+          <div class="aic-ministry-featured-card" id="youth" data-aos="fade-up" data-aos-delay="0">
+            <div class="aic-ministry-featured-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="aic-ministry-featured-content">
+              <h3>Youth Ministry <span>— Empowered for Christ</span></h3>
+              <p>Our Youth Ministry is a vibrant community of young people ages 13-25 who are passionate about knowing God and making Him known. We meet weekly for worship, Bible study, mentorship, and fun activities designed to build character and deepen faith.</p>
+              <div class="aic-ministry-details">
+                <div class="aic-ministry-detail-item"><i class="fas fa-clock"></i> Saturdays: 3:00 PM - 5:00 PM</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-map-marker-alt"></i> Youth Hall, Ground Floor</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-user"></i> Leader: Pastor David Omondi</div>
+              </div>
+              <a href="#contact" class="aic-ministry-join-btn">Join Youth Ministry <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="aic-ministry-featured-card" id="women" data-aos="fade-up" data-aos-delay="100">
+            <div class="aic-ministry-featured-icon">
+              <i class="fas fa-female"></i>
+            </div>
+            <div class="aic-ministry-featured-content">
+              <h3>Women Ministry <span>— Women of Purpose</span></h3>
+              <p>The Women's Ministry exists to encourage women to grow in faith, leadership, and service. Through conferences, prayer meetings, mentorship circles, and outreach programs, we equip women to fulfill their God-given potential in the church and community.</p>
+              <div class="aic-ministry-details">
+                <div class="aic-ministry-detail-item"><i class="fas fa-clock"></i> Wednesdays: 10:00 AM - 12:00 PM</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-map-marker-alt"></i> Fellowship Hall</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-user"></i> Leader: Mama Ruth Akinyi</div>
+              </div>
+              <a href="#contact" class="aic-ministry-join-btn">Join Women Ministry <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="aic-ministry-featured-card" id="men" data-aos="fade-up" data-aos-delay="200">
+            <div class="aic-ministry-featured-icon">
+              <i class="fas fa-male"></i>
+            </div>
+            <div class="aic-ministry-featured-content">
+              <h3>Men Fellowship <span>— Warriors of Faith</span></h3>
+              <p>Men's Fellowship provides a space for men to connect, grow spiritually, and support one another. We focus on building strong Christian character, leadership development, accountability, and active participation in church and family life.</p>
+              <div class="aic-ministry-details">
+                <div class="aic-ministry-detail-item"><i class="fas fa-clock"></i> Saturdays: 7:00 AM - 8:30 AM</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-map-marker-alt"></i> Main Sanctuary</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-user"></i> Leader: Brother Joseph Kimathi</div>
+              </div>
+              <a href="#contact" class="aic-ministry-join-btn">Join Men Fellowship <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="aic-ministry-featured-card" id="children" data-aos="fade-up" data-aos-delay="300">
+            <div class="aic-ministry-featured-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <div class="aic-ministry-featured-content">
+              <h3>Children Ministry <span>— Little Disciples</span></h3>
+              <p>We nurture children ages 3-12 with age-appropriate Bible lessons, songs, crafts, and activities. Our dedicated team of teachers helps children build a strong biblical foundation, learn memory verses, and develop a personal relationship with Jesus.</p>
+              <div class="aic-ministry-details">
+                <div class="aic-ministry-detail-item"><i class="fas fa-clock"></i> Sundays: 10:30 AM - 12:00 PM</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-map-marker-alt"></i> Children's Church Wing</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-user"></i> Leader: Sister Mercy Njeri</div>
+              </div>
+              <a href="#contact" class="aic-ministry-join-btn">Join Children Ministry <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="aic-ministry-featured-card" id="worship" data-aos="fade-up" data-aos-delay="400">
+            <div class="aic-ministry-featured-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <div class="aic-ministry-featured-content">
+              <h3>Worship Ministry <span>— Leading in Praise</span></h3>
+              <p>The Worship Ministry leads the congregation into God's presence through spirit-filled praise and worship. We welcome singers, musicians, sound technicians, and media operators who are passionate about using their gifts to glorify God.</p>
+              <div class="aic-ministry-details">
+                <div class="aic-ministry-detail-item"><i class="fas fa-clock"></i> Wednesdays: 6:00 PM - 8:00 PM (Rehearsal)</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-map-marker-alt"></i> Main Sanctuary</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-user"></i> Leader: Brother Caleb Otieno</div>
+              </div>
+              <a href="#contact" class="aic-ministry-join-btn">Join Worship Ministry <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="aic-ministry-featured-card" id="media" data-aos="fade-up" data-aos-delay="500">
+            <div class="aic-ministry-featured-icon">
+              <i class="fas fa-camera"></i>
+            </div>
+            <div class="aic-ministry-featured-content">
+              <h3>Media Ministry <span>— Digital Discipleship</span></h3>
+              <p>The Media Ministry shares the gospel through technology, social media, live streaming, photography, videography, and graphic design. We ensure the message reaches beyond the church walls to a global audience.</p>
+              <div class="aic-ministry-details">
+                <div class="aic-ministry-detail-item"><i class="fas fa-clock"></i> Sundays & Special Events</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-map-marker-alt"></i> Media Booth / Virtual</div>
+                <div class="aic-ministry-detail-item"><i class="fas fa-user"></i> Leader: Brother Ian Mwangi</div>
+              </div>
+              <a href="#contact" class="aic-ministry-join-btn">Join Media Ministry <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         ADDITIONAL MINISTRIES
+    ===================================================== -->
+    <section class="aic-additional-ministries">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">More Opportunities</span>
+          <h2 class="aic-section-title">Other Ministries</h2>
+          <div class="aic-section-divider"></div>
+        </div>
+        
+        <div class="aic-additional-grid">
+          <div class="aic-additional-card" data-aos="flip-up" data-aos-delay="0">
+            <i class="fas fa-pray"></i>
+            <h3>Intercessory Prayer Team</h3>
+            <p>Dedicated prayer warriors who intercede for the church, community, and nations.</p>
+          </div>
+          <div class="aic-additional-card" data-aos="flip-up" data-aos-delay="100">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Hospitality Ministry</h3>
+            <p>Welcoming guests, preparing meals, and creating a warm environment for fellowship.</p>
+          </div>
+          <div class="aic-additional-card" data-aos="flip-up" data-aos-delay="200">
+            <i class="fas fa-truck"></i>
+            <h3>Outreach & Missions</h3>
+            <p>Organizing evangelism, food distribution, medical camps, and mission trips.</p>
+          </div>
+          <div class="aic-additional-card" data-aos="flip-up" data-aos-delay="300">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Sunday School Teachers</h3>
+            <p>Teaching children biblical truths and helping them grow in faith.</p>
+          </div>
+          <div class="aic-additional-card" data-aos="flip-up" data-aos-delay="400">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Ushering & Security</h3>
+            <p>Ensuring orderly worship services and safety for all attendees.</p>
+          </div>
+          <div class="aic-additional-card" data-aos="flip-up" data-aos-delay="500">
+            <i class="fas fa-tools"></i>
+            <h3>Facilities & Maintenance</h3>
+            <p>Caring for church property, repairs, and setup for events and services.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         MINISTRY SCHEDULE / TIMETABLE
+    ===================================================== -->
+    <section class="aic-ministry-schedule">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Weekly Schedule</span>
+          <h2 class="aic-section-title">Ministry Meeting Times</h2>
+          <div class="aic-section-divider"></div>
+        </div>
+        
+        <div class="aic-schedule-grid" data-aos="fade-up">
+          <div class="aic-schedule-day">
+            <h3><i class="fas fa-calendar-alt"></i> Monday</h3>
+            <ul>
+              <li><span class="aic-schedule-time">5:30 AM</span> - Morning Prayer (Online)</li>
+              <li><span class="aic-schedule-time">6:00 PM</span> - Intercessory Prayer</li>
+            </ul>
+          </div>
+          <div class="aic-schedule-day">
+            <h3><i class="fas fa-calendar-alt"></i> Tuesday</h3>
+            <ul>
+              <li><span class="aic-schedule-time">6:00 PM</span> - Choir Rehearsal</li>
+              <li><span class="aic-schedule-time">6:00 PM</span> - Home Cell Groups</li>
+            </ul>
+          </div>
+          <div class="aic-schedule-day">
+            <h3><i class="fas fa-calendar-alt"></i> Wednesday</h3>
+            <ul>
+              <li><span class="aic-schedule-time">10:00 AM</span> - Women's Fellowship</li>
+              <li><span class="aic-schedule-time">5:30 PM</span> - Midweek Prayer Service</li>
+              <li><span class="aic-schedule-time">6:00 PM</span> - Worship Rehearsal</li>
+            </ul>
+          </div>
+          <div class="aic-schedule-day">
+            <h3><i class="fas fa-calendar-alt"></i> Thursday</h3>
+            <ul>
+              <li><span class="aic-schedule-time">6:00 PM</span> - Discipleship Class</li>
+            </ul>
+          </div>
+          <div class="aic-schedule-day">
+            <h3><i class="fas fa-calendar-alt"></i> Friday</h3>
+            <ul>
+              <li><span class="aic-schedule-time">6:00 PM</span> - Bible Study</li>
+            </ul>
+          </div>
+          <div class="aic-schedule-day">
+            <h3><i class="fas fa-calendar-alt"></i> Saturday</h3>
+            <ul>
+              <li><span class="aic-schedule-time">7:00 AM</span> - Men's Fellowship</li>
+              <li><span class="aic-schedule-time">3:00 PM</span> - Youth Service</li>
+            </ul>
+          </div>
+          <div class="aic-schedule-day">
+            <h3><i class="fas fa-calendar-alt"></i> Sunday</h3>
+            <ul>
+              <li><span class="aic-schedule-time">8:00 AM</span> - First Service</li>
+              <li><span class="aic-schedule-time">10:30 AM</span> - Second Service</li>
+              <li><span class="aic-schedule-time">10:30 AM</span> - Children's Church</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TESTIMONIALS FROM MINISTRY MEMBERS
+    ===================================================== -->
+    <section class="aic-ministry-testimonials">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Impact Stories</span>
+          <h2 class="aic-section-title">What Members Say</h2>
+          <div class="aic-section-divider"></div>
+        </div>
+        
+        <div class="aic-testimonials-slider" id="aic-testimonials-slider">
+          <div class="aic-testimonial-track">
+            <div class="aic-testimonial-card">
+              <i class="fas fa-quote-left"></i>
+              <p>Joining the Youth Ministry transformed my life. I found purpose, godly friends, and a passion for serving God.</p>
+              <div class="aic-testimonial-author">
+                <strong>Brian Odhiambo</strong>
+                <span>Youth Ministry</span>
+              </div>
+            </div>
+            <div class="aic-testimonial-card">
+              <i class="fas fa-quote-left"></i>
+              <p>The Women's Ministry gave me a safe space to grow spiritually and connect with other women. I've been so blessed!</p>
+              <div class="aic-testimonial-author">
+                <strong>Mary Atieno</strong>
+                <span>Women Ministry</span>
+              </div>
+            </div>
+            <div class="aic-testimonial-card">
+              <i class="fas fa-quote-left"></i>
+              <p>Men's Fellowship helped me become a better husband, father, and leader. The accountability is life-changing.</p>
+              <div class="aic-testimonial-author">
+                <strong>John Mwangi</strong>
+                <span>Men Fellowship</span>
+              </div>
+            </div>
+            <div class="aic-testimonial-card">
+              <i class="fas fa-quote-left"></i>
+              <p>I love serving in the Worship Ministry! Using my musical gifts to lead others into God's presence is amazing.</p>
+              <div class="aic-testimonial-author">
+                <strong>Sarah Wanjiku</strong>
+                <span>Worship Team</span>
+              </div>
+            </div>
+          </div>
+          <div class="aic-testimonial-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CALL TO ACTION - JOIN A MINISTRY
+    ===================================================== -->
+    <section class="aic-join-ministry-cta">
+      <div class="aic-container">
+        <div class="aic-cta-content" data-aos="zoom-in">
+          <i class="fas fa-hand-peace"></i>
+          <h2>Ready to Get Involved?</h2>
+          <p>Your gifts, talents, and time can make an eternal impact. Fill out the form below or visit us after service to join any ministry.</p>
+          <div class="aic-cta-buttons">
+            <a href="#aic-contact-section" class="aic-btn-primary aic-btn-large">Fill Interest Form <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="aic-btn-outline aic-btn-large">Talk to a Leader <i class="fas fa-comments"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT SECTION (for ministry signup)
+    ===================================================== -->
+    <section id="aic-contact-section" class="aic-contact-section">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Sign Up</span>
+          <h2 class="aic-section-title">Join a Ministry</h2>
+          <div class="aic-section-divider"></div>
+          <p class="aic-section-subtitle">Fill out the form and we'll connect you with the right ministry leader</p>
+        </div>
+        
+        <div class="aic-contact-grid">
+          <div class="aic-contact-info" data-aos="fade-right">
+            <h3>Need Help Choosing?</h3>
+            <p>We understand it can be overwhelming to choose where to serve. Our ministry coordinators are ready to help you discover your gifts and find the perfect fit.</p>
+            <div class="aic-contact-details">
+              <div class="aic-contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>+254 712 345 678</p>
+                </div>
+              </div>
+              <div class="aic-contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>ministries@aickongowea.org</p>
+                </div>
+              </div>
+              <div class="aic-contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Visit Us</h4>
+                  <p>After any Sunday service at the Info Desk</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="aic-contact-form-wrapper" data-aos="fade-left">
+            <form class="aic-contact-form" id="aic-ministry-form">
+              <div class="aic-form-group">
+                <input type="text" id="aic-form-name" placeholder="Full Name" required>
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="aic-form-group">
+                <input type="email" id="aic-form-email" placeholder="Email Address" required>
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="aic-form-group">
+                <input type="tel" id="aic-form-phone" placeholder="Phone Number">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="aic-form-group">
+                <select id="aic-form-ministry" required>
+                  <option value="">Select Ministry Interested In</option>
+                  <option value="Youth">Youth Ministry</option>
+                  <option value="Women">Women Ministry</option>
+                  <option value="Men">Men Fellowship</option>
+                  <option value="Children">Children Ministry</option>
+                  <option value="Worship">Worship Ministry</option>
+                  <option value="Media">Media Ministry</option>
+                  <option value="Prayer">Intercessory Prayer</option>
+                  <option value="Hospitality">Hospitality Ministry</option>
+                  <option value="Outreach">Outreach & Missions</option>
+                  <option value="Ushering">Ushering & Security</option>
+                </select>
+                <i class="fas fa-tag"></i>
+              </div>
+              <div class="aic-form-group">
+                <textarea id="aic-form-message" rows="4" placeholder="Tell us about your gifts, talents, or experience..."></textarea>
+                <i class="fas fa-pen"></i>
+              </div>
+              <button type="submit" class="aic-btn-primary aic-btn-full">Submit Interest <i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BIBLE VERSE OF THE DAY
+    ===================================================== -->
+    <div class="aic-bible-verse-widget" id="aic-bible-verse">
+      <div class="aic-verse-content">
+        <i class="fas fa-bible"></i>
+        <p id="aic-verse-text">Loading verse...</p>
+        <span id="aic-verse-reference"></span>
+      </div>
+      <button class="aic-verse-close" id="aic-verse-close">×</button>
+    </div>
+
+    <!-- =====================================================
+         PRAYER REQUEST FLOATING BUTTON
+    ===================================================== -->
+    <button class="aic-prayer-button" id="aic-prayer-button">
+      <i class="fas fa-praying-hands"></i>
+      <span>Prayer Request</span>
+    </button>
+    
+    <div class="aic-prayer-modal" id="aic-prayer-modal">
+      <div class="aic-prayer-modal-content">
+        <button class="aic-prayer-modal-close">&times;</button>
+        <i class="fas fa-pray"></i>
+        <h3>Submit a Prayer Request</h3>
+        <form id="aic-prayer-form">
+          <input type="text" placeholder="Your Name (Optional)">
+          <textarea rows="4" placeholder="Share your prayer request..."></textarea>
+          <button type="submit" class="aic-btn-primary">Submit Request</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         BACK TO TOP BUTTON
+    ===================================================== -->
+    <button class="aic-back-to-top" id="aic-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="aic-footer">
+    <div class="aic-container">
+      <div class="aic-footer-grid">
+        <div class="aic-footer-col">
+          <div class="aic-footer-logo">
+            <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-footer-logo-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="aic-footer-logo-fallback" style="display: none;">
+              <i class="fas fa-cross"></i>
+            </div>
+            <span>AIC Kongowea</span>
+          </div>
+          <p>African Inland Church — Kongowea, Mombasa, Kenya</p>
+          <p>A Christ-centered church transforming lives through worship, discipleship, and community service.</p>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Ministries</h4>
+          <ul>
+            <li><a href="ministries.html#youth">Youth Ministry</a></li>
+            <li><a href="ministries.html#women">Women Ministry</a></li>
+            <li><a href="ministries.html#men">Men Fellowship</a></li>
+            <li><a href="ministries.html#children">Children Ministry</a></li>
+            <li><a href="ministries.html#worship">Worship Team</a></li>
+            <li><a href="ministries.html#media">Media Ministry</a></li>
+          </ul>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates and devotionals</p>
+          <div class="aic-footer-newsletter">
+            <input type="email" placeholder="Your email">
+            <button><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="aic-footer-bottom">
+        <p>&copy; 2025 AIC Kongowea — African Inland Church. All glory to God.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

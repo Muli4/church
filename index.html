@@ -23,7 +23,6 @@
   ===================================================== -->
   <div id="aic-preloader" class="aic-preloader">
     <div class="aic-preloader-inner">
-      <!-- Logo Image in Preloader -->
       <div class="aic-preloader-logo">
         <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-preloader-img" 
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -44,7 +43,6 @@
     <div class="aic-header-main">
       <div class="aic-container aic-header-flex">
         
-        <!-- Logo / Brand with Image Fallback -->
         <a href="index.html" class="aic-logo" id="aic-logo-main">
           <div class="aic-logo-icon">
             <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-logo-img"
@@ -59,7 +57,6 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation - Links to separate pages -->
         <nav class="aic-nav-desktop" id="aic-nav-primary">
           <ul class="aic-nav-list" id="aic-desktop-nav-list">
             <li class="aic-nav-item"><a href="index.html" class="aic-nav-link aic-nav-link-active">Home</a></li>
@@ -72,7 +69,6 @@
           </ul>
         </nav>
 
-        <!-- Mobile Hamburger with Animation -->
         <button class="aic-mobile-toggle" id="aic-mobile-toggle-btn" aria-label="Menu">
           <span class="aic-hamburger-line aic-hamburger-line-1"></span>
           <span class="aic-hamburger-line aic-hamburger-line-2"></span>
@@ -81,7 +77,6 @@
       </div>
     </div>
 
-    <!-- Mobile Menu Overlay -->
     <div class="aic-mobile-overlay" id="aic-mobile-overlay">
       <div class="aic-mobile-overlay-bg"></div>
       <div class="aic-mobile-menu-container">
@@ -277,65 +272,43 @@
         
         <div class="aic-values-grid">
           <div class="aic-value-card" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="500">
-            <div class="aic-value-icon">
-              <i class="fas fa-praying-hands"></i>
-            </div>
+            <div class="aic-value-icon"><i class="fas fa-praying-hands"></i></div>
             <h3>Faith in God</h3>
-            <div class="aic-value-progress">
-              <div class="aic-progress-bar" style="width: 100%"></div>
-            </div>
+            <div class="aic-value-progress"><div class="aic-progress-bar" style="width: 100%"></div></div>
           </div>
           <div class="aic-value-card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="500">
-            <div class="aic-value-icon">
-              <i class="fas fa-heart"></i>
-            </div>
+            <div class="aic-value-icon"><i class="fas fa-heart"></i></div>
             <h3>Love & Compassion</h3>
-            <div class="aic-value-progress">
-              <div class="aic-progress-bar" style="width: 100%"></div>
-            </div>
+            <div class="aic-value-progress"><div class="aic-progress-bar" style="width: 100%"></div></div>
           </div>
           <div class="aic-value-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500">
-            <div class="aic-value-icon">
-              <i class="fas fa-balance-scale"></i>
-            </div>
+            <div class="aic-value-icon"><i class="fas fa-balance-scale"></i></div>
             <h3>Integrity</h3>
-            <div class="aic-value-progress">
-              <div class="aic-progress-bar" style="width: 100%"></div>
-            </div>
+            <div class="aic-value-progress"><div class="aic-progress-bar" style="width: 100%"></div></div>
           </div>
           <div class="aic-value-card" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="500">
-            <div class="aic-value-icon">
-              <i class="fas fa-hands-helping"></i>
-            </div>
+            <div class="aic-value-icon"><i class="fas fa-hands-helping"></i></div>
             <h3>Service to Community</h3>
-            <div class="aic-value-progress">
-              <div class="aic-progress-bar" style="width: 100%"></div>
-            </div>
+            <div class="aic-value-progress"><div class="aic-progress-bar" style="width: 100%"></div></div>
           </div>
           <div class="aic-value-card" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="500">
-            <div class="aic-value-icon">
-              <i class="fas fa-users"></i>
-            </div>
+            <div class="aic-value-icon"><i class="fas fa-users"></i></div>
             <h3>Unity & Fellowship</h3>
-            <div class="aic-value-progress">
-              <div class="aic-progress-bar" style="width: 100%"></div>
-            </div>
+            <div class="aic-value-progress"><div class="aic-progress-bar" style="width: 100%"></div></div>
           </div>
           <div class="aic-value-card" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500">
-            <div class="aic-value-icon">
-              <i class="fas fa-seedling"></i>
-            </div>
+            <div class="aic-value-icon"><i class="fas fa-seedling"></i></div>
             <h3>Spiritual Growth</h3>
-            <div class="aic-value-progress">
-              <div class="aic-progress-bar" style="width: 100%"></div>
-            </div>
+            <div class="aic-value-progress"><div class="aic-progress-bar" style="width: 100%"></div></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =====================================================
-         MINISTRIES SECTION WITH FLIP CARDS
+         MINISTRIES SECTION WITH FLIP CARDS — FIXED
+         Each card now has .aic-ministry-card-inner wrapper
+         so the 3D flip context works correctly.
     ===================================================== -->
     <section id="aic-ministries-section" class="aic-ministries-section">
       <div class="aic-container">
@@ -347,95 +320,109 @@
         </div>
         
         <div class="aic-ministries-grid">
-          <!-- Ministry Card 1 -->
+
+          <!-- Ministry Card 1 — Youth -->
           <div class="aic-ministry-card-flip" data-aos="flip-left" data-aos-delay="0">
-            <div class="aic-ministry-card-front">
-              <i class="fas fa-users"></i>
-              <h3>Youth Ministry</h3>
-              <span class="aic-ministry-hint">Click to learn more</span>
-            </div>
-            <div class="aic-ministry-card-back">
-              <i class="fas fa-fire"></i>
-              <h3>Youth Ministry</h3>
-              <p>Empowering young people spiritually & socially through mentorship, worship, and fellowship activities.</p>
-              <a href="ministries.html#youth" class="aic-ministry-link">Join Us →</a>
+            <div class="aic-ministry-card-inner">
+              <div class="aic-ministry-card-front">
+                <i class="fas fa-users"></i>
+                <h3>Youth Ministry</h3>
+                <span class="aic-ministry-hint">Hover to learn more</span>
+              </div>
+              <div class="aic-ministry-card-back">
+                <i class="fas fa-fire"></i>
+                <h3>Youth Ministry</h3>
+                <p>Empowering young people spiritually & socially through mentorship, worship, and fellowship activities.</p>
+                <a href="ministries.html#youth" class="aic-ministry-link">Join Us →</a>
+              </div>
             </div>
           </div>
-          
-          <!-- Ministry Card 2 -->
+
+          <!-- Ministry Card 2 — Women -->
           <div class="aic-ministry-card-flip" data-aos="flip-left" data-aos-delay="100">
-            <div class="aic-ministry-card-front">
-              <i class="fas fa-female"></i>
-              <h3>Women Ministry</h3>
-              <span class="aic-ministry-hint">Click to learn more</span>
-            </div>
-            <div class="aic-ministry-card-back">
-              <i class="fas fa-heart"></i>
-              <h3>Women Ministry</h3>
-              <p>Encouraging women to grow in faith, leadership, and service within the church and community.</p>
-              <a href="ministries.html#women" class="aic-ministry-link">Join Us →</a>
+            <div class="aic-ministry-card-inner">
+              <div class="aic-ministry-card-front">
+                <i class="fas fa-female"></i>
+                <h3>Women Ministry</h3>
+                <span class="aic-ministry-hint">Hover to learn more</span>
+              </div>
+              <div class="aic-ministry-card-back">
+                <i class="fas fa-heart"></i>
+                <h3>Women Ministry</h3>
+                <p>Encouraging women to grow in faith, leadership, and service within the church and community.</p>
+                <a href="ministries.html#women" class="aic-ministry-link">Join Us →</a>
+              </div>
             </div>
           </div>
-          
-          <!-- Ministry Card 3 -->
+
+          <!-- Ministry Card 3 — Men -->
           <div class="aic-ministry-card-flip" data-aos="flip-left" data-aos-delay="200">
-            <div class="aic-ministry-card-front">
-              <i class="fas fa-male"></i>
-              <h3>Men Fellowship</h3>
-              <span class="aic-ministry-hint">Click to learn more</span>
-            </div>
-            <div class="aic-ministry-card-back">
-              <i class="fas fa-shield-alt"></i>
-              <h3>Men Fellowship</h3>
-              <p>Building strong Christian men through prayer, leadership, and accountability.</p>
-              <a href="ministries.html#men" class="aic-ministry-link">Join Us →</a>
+            <div class="aic-ministry-card-inner">
+              <div class="aic-ministry-card-front">
+                <i class="fas fa-male"></i>
+                <h3>Men Fellowship</h3>
+                <span class="aic-ministry-hint">Hover to learn more</span>
+              </div>
+              <div class="aic-ministry-card-back">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Men Fellowship</h3>
+                <p>Building strong Christian men through prayer, leadership, and accountability.</p>
+                <a href="ministries.html#men" class="aic-ministry-link">Join Us →</a>
+              </div>
             </div>
           </div>
-          
-          <!-- Ministry Card 4 -->
+
+          <!-- Ministry Card 4 — Children -->
           <div class="aic-ministry-card-flip" data-aos="flip-left" data-aos-delay="300">
-            <div class="aic-ministry-card-front">
-              <i class="fas fa-child"></i>
-              <h3>Children Ministry</h3>
-              <span class="aic-ministry-hint">Click to learn more</span>
-            </div>
-            <div class="aic-ministry-card-back">
-              <i class="fas fa-smile"></i>
-              <h3>Children Ministry</h3>
-              <p>Teaching children biblical values and helping them grow in faith from an early age.</p>
-              <a href="ministries.html#children" class="aic-ministry-link">Join Us →</a>
+            <div class="aic-ministry-card-inner">
+              <div class="aic-ministry-card-front">
+                <i class="fas fa-child"></i>
+                <h3>Children Ministry</h3>
+                <span class="aic-ministry-hint">Hover to learn more</span>
+              </div>
+              <div class="aic-ministry-card-back">
+                <i class="fas fa-smile"></i>
+                <h3>Children Ministry</h3>
+                <p>Teaching children biblical values and helping them grow in faith from an early age.</p>
+                <a href="ministries.html#children" class="aic-ministry-link">Join Us →</a>
+              </div>
             </div>
           </div>
-          
-          <!-- Ministry Card 5 -->
+
+          <!-- Ministry Card 5 — Worship -->
           <div class="aic-ministry-card-flip" data-aos="flip-left" data-aos-delay="400">
-            <div class="aic-ministry-card-front">
-              <i class="fas fa-music"></i>
-              <h3>Worship Ministry</h3>
-              <span class="aic-ministry-hint">Click to learn more</span>
-            </div>
-            <div class="aic-ministry-card-back">
-              <i class="fas fa-dove"></i>
-              <h3>Worship Ministry</h3>
-              <p>Leading the congregation into God's presence through praise and worship.</p>
-              <a href="ministries.html#worship" class="aic-ministry-link">Join Us →</a>
+            <div class="aic-ministry-card-inner">
+              <div class="aic-ministry-card-front">
+                <i class="fas fa-music"></i>
+                <h3>Worship Ministry</h3>
+                <span class="aic-ministry-hint">Hover to learn more</span>
+              </div>
+              <div class="aic-ministry-card-back">
+                <i class="fas fa-dove"></i>
+                <h3>Worship Ministry</h3>
+                <p>Leading the congregation into God's presence through praise and worship.</p>
+                <a href="ministries.html#worship" class="aic-ministry-link">Join Us →</a>
+              </div>
             </div>
           </div>
-          
-          <!-- Ministry Card 6 -->
+
+          <!-- Ministry Card 6 — Media -->
           <div class="aic-ministry-card-flip" data-aos="flip-left" data-aos-delay="500">
-            <div class="aic-ministry-card-front">
-              <i class="fas fa-camera"></i>
-              <h3>Media Ministry</h3>
-              <span class="aic-ministry-hint">Click to learn more</span>
-            </div>
-            <div class="aic-ministry-card-back">
-              <i class="fas fa-broadcast-tower"></i>
-              <h3>Media Ministry</h3>
-              <p>Sharing the gospel through technology, social media, and creative arts.</p>
-              <a href="ministries.html#media" class="aic-ministry-link">Join Us →</a>
+            <div class="aic-ministry-card-inner">
+              <div class="aic-ministry-card-front">
+                <i class="fas fa-camera"></i>
+                <h3>Media Ministry</h3>
+                <span class="aic-ministry-hint">Hover to learn more</span>
+              </div>
+              <div class="aic-ministry-card-back">
+                <i class="fas fa-broadcast-tower"></i>
+                <h3>Media Ministry</h3>
+                <p>Sharing the gospel through technology, social media, and creative arts.</p>
+                <a href="ministries.html#media" class="aic-ministry-link">Join Us →</a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -453,133 +440,90 @@
         
         <div class="aic-timeline" data-aos="fade-up">
           <div class="aic-timeline-item">
-            <div class="aic-timeline-marker">
-              <i class="fas fa-sun"></i>
-            </div>
+            <div class="aic-timeline-marker"><i class="fas fa-sun"></i></div>
             <div class="aic-timeline-content">
               <h3>Sunday Worship Service</h3>
-              <div class="aic-timeline-time">
-                <i class="fas fa-clock"></i>
-                <span>8:00 AM - 10:00 AM | First Service</span>
-              </div>
-              <div class="aic-timeline-time">
-                <i class="fas fa-clock"></i>
-                <span>10:30 AM - 12:30 PM | Second Service</span>
-              </div>
+              <div class="aic-timeline-time"><i class="fas fa-clock"></i><span>8:00 AM - 10:00 AM | First Service</span></div>
+              <div class="aic-timeline-time"><i class="fas fa-clock"></i><span>10:30 AM - 12:30 PM | Second Service</span></div>
             </div>
           </div>
-          
           <div class="aic-timeline-item">
-            <div class="aic-timeline-marker">
-              <i class="fas fa-pray"></i>
-            </div>
+            <div class="aic-timeline-marker"><i class="fas fa-pray"></i></div>
             <div class="aic-timeline-content">
               <h3>Midweek Fellowship</h3>
-              <div class="aic-timeline-time">
-                <i class="fas fa-clock"></i>
-                <span>Wednesday | 5:30 PM - 7:00 PM</span>
-              </div>
+              <div class="aic-timeline-time"><i class="fas fa-clock"></i><span>Wednesday | 5:30 PM - 7:00 PM</span></div>
             </div>
           </div>
-          
           <div class="aic-timeline-item">
-            <div class="aic-timeline-marker">
-              <i class="fas fa-fire"></i>
-            </div>
+            <div class="aic-timeline-marker"><i class="fas fa-fire"></i></div>
             <div class="aic-timeline-content">
               <h3>Youth Service</h3>
-              <div class="aic-timeline-time">
-                <i class="fas fa-clock"></i>
-                <span>Saturday | 3:00 PM - 5:00 PM</span>
-              </div>
+              <div class="aic-timeline-time"><i class="fas fa-clock"></i><span>Saturday | 3:00 PM - 5:00 PM</span></div>
             </div>
           </div>
-          
           <div class="aic-timeline-item">
-            <div class="aic-timeline-marker">
-              <i class="fas fa-book-open"></i>
-            </div>
+            <div class="aic-timeline-marker"><i class="fas fa-book-open"></i></div>
             <div class="aic-timeline-content">
               <h3>Bible Study</h3>
-              <div class="aic-timeline-time">
-                <i class="fas fa-clock"></i>
-                <span>Friday | 6:00 PM - 7:30 PM</span>
-              </div>
+              <div class="aic-timeline-time"><i class="fas fa-clock"></i><span>Friday | 6:00 PM - 7:30 PM</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =====================================================
-         SERMONS SECTION
-    ===================================================== -->
-    <section id="aic-sermons-section" class="aic-sermons-section">
-      <div class="aic-container">
-        <div class="aic-section-header" data-aos="fade-up">
-          <span class="aic-section-tag">Listen & Grow</span>
-          <h2 class="aic-section-title">Latest Sermons</h2>
-          <div class="aic-section-divider"></div>
-        </div>
-        
-        <div class="aic-sermons-grid">
-          <div class="aic-sermon-card-modern" data-aos="fade-up" data-aos-delay="0">
-            <div class="aic-sermon-media">
-              <i class="fas fa-play-circle"></i>
-              <span class="aic-sermon-duration">32:15</span>
-            </div>
-            <div class="aic-sermon-details">
-              <h3>Walking by Faith</h3>
-              <p class="aic-sermon-scripture">Hebrews 11:1</p>
-              <p>A message encouraging believers to trust God even in uncertain times.</p>
-              <div class="aic-sermon-actions">
-                <button class="aic-sermon-btn"><i class="fas fa-video"></i> Watch</button>
-                <button class="aic-sermon-btn"><i class="fas fa-headphones"></i> Listen</button>
-                <button class="aic-sermon-btn"><i class="fas fa-download"></i> Notes</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="aic-sermon-card-modern" data-aos="fade-up" data-aos-delay="150">
-            <div class="aic-sermon-media">
-              <i class="fas fa-play-circle"></i>
-              <span class="aic-sermon-duration">28:42</span>
-            </div>
-            <div class="aic-sermon-details">
-              <h3>The Power of Prayer</h3>
-              <p class="aic-sermon-scripture">Luke 18:1</p>
-              <p>Persistence in prayer and its power in daily life.</p>
-              <div class="aic-sermon-actions">
-                <button class="aic-sermon-btn"><i class="fas fa-video"></i> Watch</button>
-                <button class="aic-sermon-btn"><i class="fas fa-headphones"></i> Listen</button>
-                <button class="aic-sermon-btn"><i class="fas fa-download"></i> Notes</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="aic-sermon-card-modern" data-aos="fade-up" data-aos-delay="300">
-            <div class="aic-sermon-media">
-              <i class="fas fa-play-circle"></i>
-              <span class="aic-sermon-duration">41:03</span>
-            </div>
-            <div class="aic-sermon-details">
-              <h3>Love in Action</h3>
-              <p class="aic-sermon-scripture">1 John 3:18</p>
-              <p>Living out genuine love beyond words.</p>
-              <div class="aic-sermon-actions">
-                <button class="aic-sermon-btn"><i class="fas fa-video"></i> Watch</button>
-                <button class="aic-sermon-btn"><i class="fas fa-headphones"></i> Listen</button>
-                <button class="aic-sermon-btn"><i class="fas fa-download"></i> Notes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="aic-sermons-footer" data-aos="fade-up">
-          <a href="sermons.html" class="aic-btn-outline">View All Sermons <i class="fas fa-arrow-right"></i></a>
+<!-- =====================================================
+     SERMONS SECTION — Live from YouTube
+     Fetches the 3 latest videos from @aickongowea001
+     via YouTube RSS feed (no API key needed)
+===================================================== -->
+<section id="aic-sermons-section" class="aic-sermons-section">
+  <div class="aic-container">
+    <div class="aic-section-header" data-aos="fade-up">
+      <span class="aic-section-tag">Listen & Grow</span>
+      <h2 class="aic-section-title">Latest Sermons</h2>
+      <div class="aic-section-divider"></div>
+    </div>
+
+    <!-- Cards injected by JS -->
+    <div class="aic-sermons-grid" id="aic-sermons-grid">
+
+      <!-- Loading skeletons shown while fetching -->
+      <div class="aic-sermon-card-modern aic-sermon-skeleton">
+        <div class="aic-sermon-media aic-skeleton-block"></div>
+        <div class="aic-sermon-details">
+          <div class="aic-skeleton-line aic-skeleton-title"></div>
+          <div class="aic-skeleton-line aic-skeleton-sub"></div>
+          <div class="aic-skeleton-line aic-skeleton-body"></div>
         </div>
       </div>
-    </section>
+      <div class="aic-sermon-card-modern aic-sermon-skeleton">
+        <div class="aic-sermon-media aic-skeleton-block"></div>
+        <div class="aic-sermon-details">
+          <div class="aic-skeleton-line aic-skeleton-title"></div>
+          <div class="aic-skeleton-line aic-skeleton-sub"></div>
+          <div class="aic-skeleton-line aic-skeleton-body"></div>
+        </div>
+      </div>
+      <div class="aic-sermon-card-modern aic-sermon-skeleton">
+        <div class="aic-sermon-media aic-skeleton-block"></div>
+        <div class="aic-sermon-details">
+          <div class="aic-skeleton-line aic-skeleton-title"></div>
+          <div class="aic-skeleton-line aic-skeleton-sub"></div>
+          <div class="aic-skeleton-line aic-skeleton-body"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="aic-sermons-footer" data-aos="fade-up">
+      <a href="https://www.youtube.com/@aickongowea001" target="_blank"
+         rel="noopener noreferrer" class="aic-btn-outline">
+        View All on YouTube <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
     <!-- =====================================================
          EVENTS SECTION WITH COUNTDOWN
@@ -601,7 +545,7 @@
             <div class="aic-event-info">
               <h3>Youth Conference</h3>
               <p>Empowering the next generation for Christ</p>
-              <div class="aic-event-countdown" data-event-date="2025-07-15T00:00:00">
+              <div class="aic-event-countdown" data-event-date="2026-07-15T00:00:00">
                 <span class="aic-countdown-days">00</span>d
                 <span class="aic-countdown-hours">00</span>h
                 <span class="aic-countdown-minutes">00</span>m
@@ -609,7 +553,6 @@
               <a href="events.html" class="aic-event-link">Learn More →</a>
             </div>
           </div>
-          
           <div class="aic-event-card-modern" data-aos="flip-up" data-aos-delay="150">
             <div class="aic-event-date-box">
               <span class="aic-event-month">JUL</span>
@@ -618,7 +561,7 @@
             <div class="aic-event-info">
               <h3>Women Prayer Retreat</h3>
               <p>Restoration, renewal & worship</p>
-              <div class="aic-event-countdown" data-event-date="2025-07-22T00:00:00">
+              <div class="aic-event-countdown" data-event-date="2026-07-22T00:00:00">
                 <span class="aic-countdown-days">00</span>d
                 <span class="aic-countdown-hours">00</span>h
                 <span class="aic-countdown-minutes">00</span>m
@@ -626,7 +569,6 @@
               <a href="events.html" class="aic-event-link">Learn More →</a>
             </div>
           </div>
-          
           <div class="aic-event-card-modern" data-aos="flip-up" data-aos-delay="300">
             <div class="aic-event-date-box">
               <span class="aic-event-month">AUG</span>
@@ -635,7 +577,7 @@
             <div class="aic-event-info">
               <h3>Community Outreach Day</h3>
               <p>Food donations, prayer & evangelism</p>
-              <div class="aic-event-countdown" data-event-date="2025-08-05T00:00:00">
+              <div class="aic-event-countdown" data-event-date="2026-08-05T00:00:00">
                 <span class="aic-countdown-days">00</span>d
                 <span class="aic-countdown-hours">00</span>h
                 <span class="aic-countdown-minutes">00</span>m
@@ -665,40 +607,22 @@
       
       <div class="aic-masonry-grid" data-aos="fade-up">
         <div class="aic-masonry-item aic-masonry-item-large">
-          <div class="aic-masonry-overlay">
-            <i class="fas fa-church"></i>
-            <span>Worship Service</span>
-          </div>
+          <div class="aic-masonry-overlay"><i class="fas fa-church"></i><span>Worship Service</span></div>
         </div>
         <div class="aic-masonry-item">
-          <div class="aic-masonry-overlay">
-            <i class="fas fa-hands-helping"></i>
-            <span>Community Outreach</span>
-          </div>
+          <div class="aic-masonry-overlay"><i class="fas fa-hands-helping"></i><span>Community Outreach</span></div>
         </div>
         <div class="aic-masonry-item">
-          <div class="aic-masonry-overlay">
-            <i class="fas fa-water"></i>
-            <span>Baptism Ceremony</span>
-          </div>
+          <div class="aic-masonry-overlay"><i class="fas fa-water"></i><span>Baptism Ceremony</span></div>
         </div>
         <div class="aic-masonry-item aic-masonry-item-tall">
-          <div class="aic-masonry-overlay">
-            <i class="fas fa-music"></i>
-            <span>Choir Performance</span>
-          </div>
+          <div class="aic-masonry-overlay"><i class="fas fa-music"></i><span>Choir Performance</span></div>
         </div>
         <div class="aic-masonry-item">
-          <div class="aic-masonry-overlay">
-            <i class="fas fa-users"></i>
-            <span>Youth Fellowship</span>
-          </div>
+          <div class="aic-masonry-overlay"><i class="fas fa-users"></i><span>Youth Fellowship</span></div>
         </div>
         <div class="aic-masonry-item">
-          <div class="aic-masonry-overlay">
-            <i class="fas fa-child"></i>
-            <span>Sunday School</span>
-          </div>
+          <div class="aic-masonry-overlay"><i class="fas fa-child"></i><span>Sunday School</span></div>
         </div>
       </div>
       
@@ -817,24 +741,15 @@
             <div class="aic-contact-details">
               <div class="aic-contact-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <h4>Location</h4>
-                  <p>Kongowea, Mombasa, Kenya</p>
-                </div>
+                <div><h4>Location</h4><p>Kongowea, Mombasa, Kenya</p></div>
               </div>
               <div class="aic-contact-item">
                 <i class="fas fa-phone-alt"></i>
-                <div>
-                  <h4>Phone</h4>
-                  <p>+254 712 345 678</p>
-                </div>
+                <div><h4>Phone</h4><p>+254 712 345 678</p></div>
               </div>
               <div class="aic-contact-item">
                 <i class="fas fa-envelope"></i>
-                <div>
-                  <h4>Email</h4>
-                  <p>info@aickongowea.org</p>
-                </div>
+                <div><h4>Email</h4><p>info@aickongowea.org</p></div>
               </div>
               <div class="aic-contact-item">
                 <i class="fas fa-clock"></i>
@@ -883,9 +798,7 @@
       </div>
     </section>
 
-    <!-- =====================================================
-         BIBLE VERSE OF THE DAY (Floating Widget)
-    ===================================================== -->
+    <!-- Bible Verse Widget -->
     <div class="aic-bible-verse-widget" id="aic-bible-verse">
       <div class="aic-verse-content">
         <i class="fas fa-bible"></i>
@@ -895,9 +808,7 @@
       <button class="aic-verse-close" id="aic-verse-close">×</button>
     </div>
 
-    <!-- =====================================================
-         PRAYER REQUEST FLOATING BUTTON
-    ===================================================== -->
+    <!-- Prayer Request Button & Modal -->
     <button class="aic-prayer-button" id="aic-prayer-button">
       <i class="fas fa-praying-hands"></i>
       <span>Prayer Request</span>
@@ -916,9 +827,7 @@
       </div>
     </div>
 
-    <!-- =====================================================
-         BACK TO TOP BUTTON
-    ===================================================== -->
+    <!-- Back to Top -->
     <button class="aic-back-to-top" id="aic-back-to-top">
       <i class="fas fa-arrow-up"></i>
     </button>
@@ -933,7 +842,6 @@
       <div class="aic-footer-grid">
         <div class="aic-footer-col">
           <div class="aic-footer-logo">
-            <!-- Logo Image with Fallback -->
             <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-footer-logo-img"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="aic-footer-logo-fallback" style="display: none;">
@@ -976,12 +884,11 @@
         </div>
       </div>
       <div class="aic-footer-bottom">
-        <p>&copy; 2025 AIC Kongowea — African Inland Church. All glory to God.</p>
+        <p>&copy; 2026 AIC Kongowea — African Inland Church. All glory to God.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>

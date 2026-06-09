@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AIC Kongowea | Sermons - Listen & Grow in Faith</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       PRELOADER ANIMATION
+  ===================================================== -->
+  <div id="aic-preloader" class="aic-preloader">
+    <div class="aic-preloader-inner">
+      <div class="aic-preloader-logo">
+        <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-preloader-img" 
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="aic-preloader-icon" style="display: none;">
+          <i class="fas fa-cross"></i>
+        </div>
+      </div>
+      <div class="aic-preloader-text">AIC Kongowea</div>
+      <div class="aic-preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       HEADER & NAVIGATION
+  ===================================================== -->
+  <header id="aic-header" class="aic-header">
+    <div class="aic-header-top-bar"></div>
+    <div class="aic-header-main">
+      <div class="aic-container aic-header-flex">
+        
+        <!-- Logo / Brand with Image Fallback -->
+        <a href="index.html" class="aic-logo" id="aic-logo-main">
+          <div class="aic-logo-icon">
+            <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-logo-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="aic-logo-fallback" style="display: none;">
+              <i class="fas fa-cross"></i>
+            </div>
+          </div>
+          <div class="aic-logo-text">
+            <span class="aic-logo-name">AIC Kongowea</span>
+            <span class="aic-logo-tagline">African Inland Church · Mombasa</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="aic-nav-desktop" id="aic-nav-primary">
+          <ul class="aic-nav-list" id="aic-desktop-nav-list">
+            <li class="aic-nav-item"><a href="index.html" class="aic-nav-link">Home</a></li>
+            <li class="aic-nav-item"><a href="about.html" class="aic-nav-link">About</a></li>
+            <li class="aic-nav-item"><a href="ministries.html" class="aic-nav-link">Ministries</a></li>
+            <li class="aic-nav-item"><a href="sermons.html" class="aic-nav-link aic-nav-link-active">Sermons</a></li>
+            <li class="aic-nav-item"><a href="events.html" class="aic-nav-link">Events</a></li>
+            <li class="aic-nav-item"><a href="contact.html" class="aic-nav-link">Contact</a></li>
+            <li class="aic-nav-item aic-nav-cta"><a href="donate.html" class="aic-btn-give">Give <i class="fas fa-heart"></i></a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button class="aic-mobile-toggle" id="aic-mobile-toggle-btn" aria-label="Menu">
+          <span class="aic-hamburger-line aic-hamburger-line-1"></span>
+          <span class="aic-hamburger-line aic-hamburger-line-2"></span>
+          <span class="aic-hamburger-line aic-hamburger-line-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="aic-mobile-overlay" id="aic-mobile-overlay">
+      <div class="aic-mobile-overlay-bg"></div>
+      <div class="aic-mobile-menu-container">
+        <ul class="aic-mobile-nav-list">
+          <li class="aic-mobile-nav-item"><a href="index.html" class="aic-mobile-nav-link">Home</a></li>
+          <li class="aic-mobile-nav-item"><a href="about.html" class="aic-mobile-nav-link">About</a></li>
+          <li class="aic-mobile-nav-item"><a href="ministries.html" class="aic-mobile-nav-link">Ministries</a></li>
+          <li class="aic-mobile-nav-item"><a href="sermons.html" class="aic-mobile-nav-link">Sermons</a></li>
+          <li class="aic-mobile-nav-item"><a href="events.html" class="aic-mobile-nav-link">Events</a></li>
+          <li class="aic-mobile-nav-item"><a href="contact.html" class="aic-mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="aic-mobile-give-container">
+          <a href="donate.html" class="aic-mobile-give-btn">Support the Ministry <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="aic-mobile-scripture">
+          <i class="fas fa-quote-left"></i>
+          <p>"For where two or three gather in my name, there am I with them."</p>
+          <span>— Matthew 18:20</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="aic-main-content">
+
+    <!-- =====================================================
+         PAGE HERO - SERMONS
+    ===================================================== -->
+    <section class="aic-page-hero">
+      <div class="aic-page-hero-bg"></div>
+      <div class="aic-container">
+        <div class="aic-page-hero-content" data-aos="fade-up">
+          <div class="aic-hero-badge-wrapper">
+            <span class="aic-hero-badge">
+              <i class="fas fa-bible"></i> Listen & Grow
+            </span>
+          </div>
+          <h1 class="aic-page-hero-title">Sermon <span class="aic-accent">Archive</span></h1>
+          <p class="aic-page-hero-description">Watch, listen, or read through our collection of sermons. Be encouraged and equipped by God's Word.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FEATURED SERMON - VIDEO PLAYER
+    ===================================================== -->
+    <section class="aic-featured-sermon">
+      <div class="aic-container">
+        <div class="aic-featured-sermon-wrapper" data-aos="fade-up">
+          <div class="aic-featured-sermon-header">
+            <span class="aic-section-tag">Featured Sermon</span>
+            <h2 class="aic-section-title">This Week's Message</h2>
+          </div>
+          <div class="aic-featured-sermon-content">
+            <div class="aic-featured-video">
+              <div class="aic-video-placeholder" id="aic-featured-video">
+                <i class="fas fa-play-circle"></i>
+                <span>Watch Sermon Video</span>
+              </div>
+            </div>
+            <div class="aic-featured-info">
+              <h3>Walking by Faith in Uncertain Times</h3>
+              <div class="aic-featured-meta">
+                <span><i class="fas fa-calendar-alt"></i> March 16, 2025</span>
+                <span><i class="fas fa-user-pastor"></i> Rev. Dr. Samuel Mwangi</span>
+                <span><i class="fas fa-book-open"></i> Hebrews 11:1-6</span>
+              </div>
+              <p>In this powerful message, Pastor Samuel encourages believers to trust God completely even when circumstances seem impossible. Faith is not the absence of doubt but the decision to trust God despite the unknown.</p>
+              <div class="aic-featured-actions">
+                <button class="aic-sermon-action-btn"><i class="fas fa-play"></i> Watch Video</button>
+                <button class="aic-sermon-action-btn"><i class="fas fa-headphones"></i> Listen Audio</button>
+                <button class="aic-sermon-action-btn"><i class="fas fa-download"></i> Download Notes</button>
+                <button class="aic-sermon-action-btn"><i class="fas fa-share-alt"></i> Share</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SERMON FILTERS & SEARCH
+    ===================================================== -->
+    <section class="aic-sermon-filters">
+      <div class="aic-container">
+        <div class="aic-filters-wrapper" data-aos="fade-up">
+          <div class="aic-search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="aic-sermon-search" placeholder="Search sermons by title, scripture, or speaker...">
+          </div>
+          <div class="aic-filter-tabs">
+            <button class="aic-filter-btn aic-filter-active" data-filter="all">All Sermons</button>
+            <button class="aic-filter-btn" data-filter="video">Video</button>
+            <button class="aic-filter-btn" data-filter="audio">Audio</button>
+            <button class="aic-filter-btn" data-filter="notes">PDF Notes</button>
+          </div>
+          <div class="aic-category-filter">
+            <select id="aic-category-select">
+              <option value="all">All Series</option>
+              <option value="faith">Faith Series</option>
+              <option value="prayer">Prayer Series</option>
+              <option value="love">Love in Action</option>
+              <option value="grace">Amazing Grace</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SERMONS GRID / ARCHIVE
+    ===================================================== -->
+    <section class="aic-sermons-archive">
+      <div class="aic-container">
+        <div class="aic-sermons-archive-grid" id="aic-sermons-archive-grid">
+          
+          <!-- Sermon Card 1 -->
+          <div class="aic-sermon-archive-card" data-type="video" data-category="faith" data-aos="fade-up" data-aos-delay="0">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-play-circle"></i>
+              <span class="aic-sermon-duration">32:15</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>Walking by Faith</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Rev. Dr. Samuel Mwangi</span>
+                <span><i class="fas fa-calendar-alt"></i> Mar 16, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Hebrews 11:1 — A message encouraging believers to trust God even in uncertain times.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 2 -->
+          <div class="aic-sermon-archive-card" data-type="audio" data-category="prayer" data-aos="fade-up" data-aos-delay="100">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-headphones"></i>
+              <span class="aic-sermon-duration">28:42</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>The Power of Prayer</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Pastor David Omondi</span>
+                <span><i class="fas fa-calendar-alt"></i> Mar 9, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Luke 18:1 — Persistence in prayer and its power in daily life.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 3 -->
+          <div class="aic-sermon-archive-card" data-type="notes" data-category="love" data-aos="fade-up" data-aos-delay="200">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-file-alt"></i>
+              <span class="aic-sermon-duration">PDF</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>Love in Action</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Rev. Dr. Samuel Mwangi</span>
+                <span><i class="fas fa-calendar-alt"></i> Mar 2, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">1 John 3:18 — Living out genuine love beyond words.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 4 -->
+          <div class="aic-sermon-archive-card" data-type="video" data-category="grace" data-aos="fade-up" data-aos-delay="300">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-play-circle"></i>
+              <span class="aic-sermon-duration">45:22</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>Amazing Grace: Saved by Grace</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Rev. Dr. Samuel Mwangi</span>
+                <span><i class="fas fa-calendar-alt"></i> Feb 23, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Ephesians 2:8-9 — Understanding the unmerited favor of God.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 5 -->
+          <div class="aic-sermon-archive-card" data-type="audio" data-category="faith" data-aos="fade-up" data-aos-delay="400">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-headphones"></i>
+              <span class="aic-sermon-duration">38:05</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>Faith That Moves Mountains</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Pastor David Omondi</span>
+                <span><i class="fas fa-calendar-alt"></i> Feb 16, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Matthew 17:20 — The power of even a small amount of faith.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 6 -->
+          <div class="aic-sermon-archive-card" data-type="notes" data-category="prayer" data-aos="fade-up" data-aos-delay="500">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-file-alt"></i>
+              <span class="aic-sermon-duration">PDF</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>The Lord's Prayer: A Model</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Rev. Dr. Samuel Mwangi</span>
+                <span><i class="fas fa-calendar-alt"></i> Feb 9, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Matthew 6:9-13 — Breaking down the perfect prayer.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 7 -->
+          <div class="aic-sermon-archive-card" data-type="video" data-category="faith" data-aos="fade-up" data-aos-delay="0">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-play-circle"></i>
+              <span class="aic-sermon-duration">52:18</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>Abraham: Father of Faith</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Rev. Dr. Samuel Mwangi</span>
+                <span><i class="fas fa-calendar-alt"></i> Feb 2, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Genesis 12:1-4 — Stepping out in obedience.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 8 -->
+          <div class="aic-sermon-archive-card" data-type="audio" data-category="love" data-aos="fade-up" data-aos-delay="100">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-headphones"></i>
+              <span class="aic-sermon-duration">30:45</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>Loving Your Neighbor</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Pastor David Omondi</span>
+                <span><i class="fas fa-calendar-alt"></i> Jan 26, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Mark 12:31 — Practical ways to love others.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sermon Card 9 -->
+          <div class="aic-sermon-archive-card" data-type="notes" data-category="grace" data-aos="fade-up" data-aos-delay="200">
+            <div class="aic-sermon-archive-media">
+              <i class="fas fa-file-alt"></i>
+              <span class="aic-sermon-duration">PDF</span>
+            </div>
+            <div class="aic-sermon-archive-details">
+              <h3>Forgiveness: Letting Go</h3>
+              <div class="aic-sermon-archive-meta">
+                <span><i class="fas fa-user-pastor"></i> Rev. Dr. Samuel Mwangi</span>
+                <span><i class="fas fa-calendar-alt"></i> Jan 19, 2025</span>
+              </div>
+              <p class="aic-sermon-scripture">Colossians 3:13 — The freedom of forgiveness.</p>
+              <div class="aic-sermon-archive-actions">
+                <button class="aic-sermon-mini-btn" title="Watch"><i class="fas fa-video"></i></button>
+                <button class="aic-sermon-mini-btn" title="Listen"><i class="fas fa-headphones"></i></button>
+                <button class="aic-sermon-mini-btn" title="Download Notes"><i class="fas fa-download"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="aic-load-more" data-aos="fade-up">
+          <button class="aic-btn-outline" id="aic-load-more-btn">Load More Sermons <i class="fas fa-arrow-down"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SERMON SERIES / PLAYLISTS
+    ===================================================== -->
+    <section class="aic-sermon-series">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Series & Playlists</span>
+          <h2 class="aic-section-title">Browse by Series</h2>
+          <div class="aic-section-divider"></div>
+        </div>
+        
+        <div class="aic-series-grid">
+          <div class="aic-series-card" data-aos="flip-left" data-aos-delay="0">
+            <i class="fas fa-cross"></i>
+            <h3>Faith Foundations</h3>
+            <p>6 Sermons</p>
+            <span class="aic-series-link">View Series →</span>
+          </div>
+          <div class="aic-series-card" data-aos="flip-left" data-aos-delay="100">
+            <i class="fas fa-pray"></i>
+            <h3>Power of Prayer</h3>
+            <p>4 Sermons</p>
+            <span class="aic-series-link">View Series →</span>
+          </div>
+          <div class="aic-series-card" data-aos="flip-left" data-aos-delay="200">
+            <i class="fas fa-heart"></i>
+            <h3>Love in Action</h3>
+            <p>5 Sermons</p>
+            <span class="aic-series-link">View Series →</span>
+          </div>
+          <div class="aic-series-card" data-aos="flip-left" data-aos-delay="300">
+            <i class="fas fa-dove"></i>
+            <h3>Amazing Grace</h3>
+            <p>3 Sermons</p>
+            <span class="aic-series-link">View Series →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         WEEKLY DEVOTIONALS
+    ===================================================== -->
+    <section class="aic-devotionals-section">
+      <div class="aic-container">
+        <div class="aic-section-header" data-aos="fade-up">
+          <span class="aic-section-tag">Daily Bread</span>
+          <h2 class="aic-section-title">Weekly Devotionals</h2>
+          <div class="aic-section-divider"></div>
+          <p class="aic-section-subtitle">Short, powerful reflections to start your week</p>
+        </div>
+        
+        <div class="aic-devotionals-grid">
+          <div class="aic-devotional-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="aic-devotional-date">Week 1 - March 2025</div>
+            <h3>The Discipline of Daily Prayer</h3>
+            <p>Developing a consistent prayer life is essential for spiritual growth. Set aside time each day to commune with God...</p>
+            <a href="#" class="aic-devotional-link">Read Devotional →</a>
+          </div>
+          <div class="aic-devotional-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="aic-devotional-date">Week 2 - March 2025</div>
+            <h3>Trusting God's Timing</h3>
+            <p>Waiting on the Lord can be difficult, but His timing is always perfect. Learn to rest in His promises...</p>
+            <a href="#" class="aic-devotional-link">Read Devotional →</a>
+          </div>
+          <div class="aic-devotional-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="aic-devotional-date">Week 3 - March 2025</div>
+            <h3>Walking in Forgiveness</h3>
+            <p>Unforgiveness hinders our relationship with God. Discover the freedom that comes from forgiving others...</p>
+            <a href="#" class="aic-devotional-link">Read Devotional →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SUBSCRIBE TO PODCAST / NEWSLETTER
+    ===================================================== -->
+    <section class="aic-subscribe-section">
+      <div class="aic-container">
+        <div class="aic-subscribe-wrapper" data-aos="zoom-in">
+          <div class="aic-subscribe-content">
+            <i class="fas fa-podcast"></i>
+            <h3>Never Miss a Sermon</h3>
+            <p>Subscribe to our podcast or newsletter and get the latest sermons delivered to your device weekly.</p>
+          </div>
+          <div class="aic-subscribe-options">
+            <div class="aic-subscribe-podcast">
+              <span>Subscribe on:</span>
+              <a href="#"><i class="fab fa-spotify"></i> Spotify</a>
+              <a href="#"><i class="fab fa-apple"></i> Apple</a>
+              <a href="#"><i class="fab fa-google-play"></i> Google</a>
+            </div>
+            <div class="aic-subscribe-email">
+              <input type="email" placeholder="Your email address">
+              <button class="aic-btn-primary">Subscribe <i class="fas fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         BIBLE VERSE OF THE DAY
+    ===================================================== -->
+    <div class="aic-bible-verse-widget" id="aic-bible-verse">
+      <div class="aic-verse-content">
+        <i class="fas fa-bible"></i>
+        <p id="aic-verse-text">Loading verse...</p>
+        <span id="aic-verse-reference"></span>
+      </div>
+      <button class="aic-verse-close" id="aic-verse-close">×</button>
+    </div>
+
+    <!-- =====================================================
+         PRAYER REQUEST FLOATING BUTTON
+    ===================================================== -->
+    <button class="aic-prayer-button" id="aic-prayer-button">
+      <i class="fas fa-praying-hands"></i>
+      <span>Prayer Request</span>
+    </button>
+    
+    <div class="aic-prayer-modal" id="aic-prayer-modal">
+      <div class="aic-prayer-modal-content">
+        <button class="aic-prayer-modal-close">&times;</button>
+        <i class="fas fa-pray"></i>
+        <h3>Submit a Prayer Request</h3>
+        <form id="aic-prayer-form">
+          <input type="text" placeholder="Your Name (Optional)">
+          <textarea rows="4" placeholder="Share your prayer request..."></textarea>
+          <button type="submit" class="aic-btn-primary">Submit Request</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         BACK TO TOP BUTTON
+    ===================================================== -->
+    <button class="aic-back-to-top" id="aic-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="aic-footer">
+    <div class="aic-container">
+      <div class="aic-footer-grid">
+        <div class="aic-footer-col">
+          <div class="aic-footer-logo">
+            <img src="images/logo.jpg" alt="AIC Kongowea Logo" id="aic-footer-logo-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="aic-footer-logo-fallback" style="display: none;">
+              <i class="fas fa-cross"></i>
+            </div>
+            <span>AIC Kongowea</span>
+          </div>
+          <p>African Inland Church — Kongowea, Mombasa, Kenya</p>
+          <p>A Christ-centered church transforming lives through worship, discipleship, and community service.</p>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="sermons.html">Sermon Archive</a></li>
+            <li><a href="#">Weekly Devotionals</a></li>
+            <li><a href="#">Bible Reading Plan</a></li>
+            <li><a href="#">Prayer Requests</a></li>
+          </ul>
+        </div>
+        <div class="aic-footer-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates and devotionals</p>
+          <div class="aic-footer-newsletter">
+            <input type="email" placeholder="Your email">
+            <button><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="aic-footer-bottom">
+        <p>&copy; 2025 AIC Kongowea — African Inland Church. All glory to God.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
